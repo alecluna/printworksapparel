@@ -1,3 +1,56 @@
+# How do I spin up the project locally on Mac? 
+
+Note: Make sure `Node` and `PostgresDB` are installed on your machine first.
+
+## 1.) First Download Python3 and Pip (Python's package manager)
+`$ brew install python3`
+
+## 2.) Make sure Git is installed (We will be using this alot)
+`$ brew install git`
+
+## 3.) (this step is optional) Use Homebrew to install the graphical libraries necessary for PDF creation:
+`$ brew install cairo pango gdk-pixbuf libffi`
+
+## Clone the project 
+`git clone https://github.com/alecluna/printworksapparel.git`
+
+## 4.) Go into the project directory:
+`cd printworksapparel`
+
+## 5.) Install and update Python's existing dependencies: (this is where I ran into a little trouble with pip, try using pip3 as an alternative because your python version might not support a dependency that Saleor uses.)
+`$pip install -r requirements.txt` or `$pip3 install -r requirements.txt`
+
+_Note from the Docs:_
+## Managing Dependencies
+
+To guarantee repeatable installations, all project dependencies are managed using Pipenv. Project’s direct dependencies are listed in Pipfile and running pipenv lock would generate Pipfile.lock that has all versions pinned.
+
+
+For users who are not using Pipenv, `requirements.txt` and `requirements_dev.txt` are also provided. 
+
+They should be updated by pipenv lock -r > requirements.txt and pipenv lock -r --dev > requirements_dev.txt, if any dependencies are changed in Pipfile.
+
+*We recommend you use this workflow and keep Pipfile as well as Pipfile.lock under version control to make sure all computers and environments run exactly the same code.*
+
+
+## 6.) Set `SECRET_KEY` environment variable. I changed mine to `stingersup` This is for security reasons when developing.
+`$ export SECRET_KEY='stingersup'`
+
+## 7.) Spin up the database, this populates it with dummy data:
+`$ python manage.py migrate`
+
+## 8.) Install front-end, JS dependencies: (if you have trouble here, make sure Node is symlinked correctly,  and that you are in the main home directory for `printworksapparel/`
+`npm install`
+
+
+## 9.) Prepare front end assets: 
+`$ npm run build-assets`
+
+## 10 Compile emails (not sure what this does yet)
+`$ npm run build-emails`
+
+## Spin up the python dev server!!! 
+`$ python manage.py runserver`
 
 ## What makes Saleor special?
 
