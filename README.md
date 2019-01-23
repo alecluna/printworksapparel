@@ -36,6 +36,12 @@ They should be updated by pipenv lock -r > requirements.txt and pipenv lock -r -
 ## 6.) Set `SECRET_KEY` environment variable. I changed mine to `stingersup` This is for security reasons when developing.
 `$ export SECRET_KEY='stingersup'`
 
+#6.5.) Create the Postgres Database and its user *before* migrating.
+`createuser --superuser --pwprompt saleor`
+`createdb saleor`
+`pg_ctl -D /usr/local/var/postgres start`
+
+
 ## 7.) Spin up the database, this populates it with dummy data:
 `$ python manage.py migrate`
 
