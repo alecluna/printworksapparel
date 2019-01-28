@@ -51,7 +51,7 @@ CACHES = {'default': django_cache_url.config()}
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://stingersup:bobsucks$123@stingersupdb.cg4decwh5uhf.us-east-2.rds.amazonaws.com:5432', ## prod db
+        default='postgis://stingersup:bobsucks$123@stingersupdb.cg4decwh5uhf.us-east-2.rds.amazonaws.com:5432/stingersupdb', ## prod db
         conn_max_age=600)}
 
 
@@ -376,7 +376,7 @@ bootstrap4 = {
 TEST_RUNNER = 'tests.runner.PytestTestRunner'
 
 ALLOWED_HOSTS = get_list(
-    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1'))
+    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1',  ))
 ALLOWED_GRAPHQL_ORIGINS = os.environ.get('ALLOWED_GRAPHQL_ORIGINS', '*')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
