@@ -12,13 +12,14 @@ from ...core.permissions import get_permissions
 from ...core.utils import get_client_ip, get_country_by_ip
 from ...menu import models as menu_models
 from ...product import models as product_models
-from ...site import AuthenticationBackends, models as site_models
+from ...site import models as site_models
+from ..core.enums import WeightUnitsEnum
 from ..core.types.common import (
-    CountryDisplay, LanguageDisplay, PermissionDisplay, WeightUnitsEnum)
-from ..core.utils import str_to_enum
+    CountryDisplay, LanguageDisplay, PermissionDisplay)
 from ..menu.types import Menu
 from ..product.types import Collection
 from ..utils import format_permissions_for_display
+from .enums import AuthorizationKeyType
 
 
 class Navigation(graphene.ObjectType):
@@ -27,11 +28,6 @@ class Navigation(graphene.ObjectType):
 
     class Meta:
         description = 'Represents shop\'s navigation menus.'
-
-
-AuthorizationKeyType = graphene.Enum(
-    'AuthorizationKeyType', [(str_to_enum(auth_type[0]), auth_type[0])
-                             for auth_type in AuthenticationBackends.BACKENDS])
 
 
 class AuthorizationKey(graphene.ObjectType):
@@ -101,9 +97,11 @@ class Shop(graphene.ObjectType):
         required=True)
     header_text = graphene.String(description='Header text')
     include_taxes_in_prices = graphene.Boolean(
-        description='Include taxes in prices')
+        description='Include taxes in prices', required=True)
     display_gross_prices = graphene.Boolean(
-        description='Display prices with tax in store')
+        description='Display prices with tax in store', required=True)
+    charge_taxes_on_shipping = graphene.Boolean(
+        description='Charge taxes on shipping', required=True)
     track_inventory_by_default = graphene.Boolean(
         description='Enable inventory tracking')
     default_weight_unit = WeightUnitsEnum(description='Default weight unit')
@@ -187,6 +185,9 @@ class Shop(graphene.ObjectType):
 
     def resolve_display_gross_prices(self, info):
         return info.context.site.settings.display_gross_prices
+
+    def resolve_charge_taxes_on_shipping(self, info):
+        return info.context.site.settings.charge_taxes_on_shipping
 
     def resolve_track_inventory_by_default(self, info):
         return info.context.site.settings.track_inventory_by_default

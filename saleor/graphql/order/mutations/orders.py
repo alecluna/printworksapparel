@@ -7,11 +7,13 @@ from ....order import OrderEvents, models
 from ....order.utils import cancel_order
 from ....payment import ChargeStatus, CustomPaymentChoices, PaymentError
 from ....payment.models import Payment
-from ....payment.utils import get_billing_data
+from ....payment.utils import (
+    gateway_capture, gateway_refund, gateway_void, get_billing_data)
 from ....shipping.models import ShippingMethod as ShippingMethodModel
 from ...account.types import AddressInput
 from ...core.mutations import BaseMutation
-from ...core.types.common import Decimal, Error
+from ...core.scalars import Decimal
+from ...core.types.common import Error
 from ...order.mutations.draft_orders import DraftOrderUpdate
 from ...order.types import Order, OrderEvent
 from ...shipping.types import ShippingMethod
@@ -40,13 +42,6 @@ def clean_order_update_shipping(order, method, errors):
                 field='shippingMethod',
                 message='Shipping method cannot be used with this order.'))
     return errors
-
-
-def try_payment_action(action, amount, errors):
-    try:
-        action(amount)
-    except (PaymentError, ValueError) as e:
-        errors.append(Error(field='payment', message=str(e)))
 
 
 def clean_order_cancel(order, errors):
@@ -90,7 +85,7 @@ def clean_void_payment(payment, errors):
             Error(field='payment',
                   message='Only pre-authorized payments can be voided'))
     try:
-        payment.void()
+        gateway_void(payment)
     except (PaymentError, ValueError) as e:
         errors.append(Error(field='payment', message=str(e)))
     return errors
@@ -320,7 +315,12 @@ class OrderCapture(BaseMutation):
         # FIXME adjust to multiple payments in the future
         payment = order.get_last_payment()
         clean_order_capture(payment, amount, errors)
-        try_payment_action(payment.capture, amount, errors)
+
+        try:
+            gateway_capture(payment, amount)
+        except PaymentError as e:
+            errors.append(Error(field='payment', message=str(e)))
+
         if errors:
             return OrderCapture(errors=errors)
 
@@ -382,7 +382,11 @@ class OrderRefund(BaseMutation):
         if order:
             payment = order.get_last_payment()
             clean_refund_payment(payment, amount, errors)
-            try_payment_action(payment.refund, amount, errors)
+            try:
+                gateway_refund(payment, amount)
+            except PaymentError as e:
+                errors.append(Error(field='payment', message=str(e)))
+
         if errors:
             return OrderRefund(errors=errors)
 
