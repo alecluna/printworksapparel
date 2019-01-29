@@ -126,7 +126,7 @@ class Order(models.Model):
     objects = OrderQueryset.as_manager()
 
     class Meta:
-        ordering = ('-pk',)
+        ordering = ('-pk', )
         permissions = ((
             'manage_orders',
             pgettext_lazy('Permission description', 'Manage orders.')),)
@@ -176,17 +176,17 @@ class Order(models.Model):
     def get_last_payment(self):
         return max(self.payments.all(), default=None, key=attrgetter('pk'))
 
-    def get_last_payment_status(self):
+    def get_payment_status(self):
         last_payment = self.get_last_payment()
         if last_payment:
             return last_payment.charge_status
-        return None
+        return ChargeStatus.NOT_CHARGED
 
-    def get_last_payment_status_display(self):
+    def get_payment_status_display(self):
         last_payment = self.get_last_payment()
         if last_payment:
             return last_payment.get_charge_status_display()
-        return None
+        return dict(ChargeStatus.CHOICES).get(ChargeStatus.NOT_CHARGED)
 
     def is_pre_authorized(self):
         return self.payments.filter(
@@ -308,7 +308,7 @@ class OrderLine(models.Model):
         max_digits=5, decimal_places=2, default=Decimal('0.0'))
 
     class Meta:
-        ordering = ('pk',)
+        ordering = ('pk', )
 
     def __str__(self):
         return self.product_name

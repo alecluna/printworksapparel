@@ -76,7 +76,7 @@ class CategoryTranslation(SeoModelTranslation):
 class ProductType(models.Model):
     name = models.CharField(max_length=128)
     has_variants = models.BooleanField(default=True)
-    is_shipping_required = models.BooleanField(default=False)
+    is_shipping_required = models.BooleanField(default=True)
     tax_rate = models.CharField(
         max_length=128, default=DEFAULT_TAX_RATE_NAME,
         choices=TaxRateType.CHOICES)
@@ -140,6 +140,7 @@ class Product(SeoModel):
 
     class Meta:
         app_label = 'product'
+        ordering = ('name', )
         permissions = ((
             'manage_products', pgettext_lazy(
                 'Permission description',
@@ -343,7 +344,8 @@ class Attribute(models.Model):
         return self.name
 
     def get_formfield_name(self):
-        return slugify('attribute-%s' % self.slug, allow_unicode=True)
+        return slugify(
+            'attribute-%s-%s' % (self.slug, self.pk), allow_unicode=True)
 
     def has_values(self):
         return self.values.exists()
@@ -378,7 +380,7 @@ class AttributeValue(SortableModel):
     translated = TranslationProxy()
 
     class Meta:
-        ordering = ('sort_order',)
+        ordering = ('sort_order', )
         unique_together = ('name', 'attribute')
 
     def __str__(self):
@@ -463,7 +465,7 @@ class Collection(SeoModel):
     translated = TranslationProxy()
 
     class Meta:
-        ordering = ['pk']
+        ordering = ('slug', )
 
     def __str__(self):
         return self.name
