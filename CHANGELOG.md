@@ -1,40 +1,46 @@
 # Changelog
+
 All notable, unreleased changes to this project will be documented in this file. For the released changes, please visit the [Releases](https://github.com/mirumee/saleor/releases) page.
 
 ## [Unreleased]
-- New translations:
-  - Catalan
-  - Serbian
-- Use `PermissionEnum` as input parameter type for `permissions` field - #3434 by @maarcingebala
-- Fix minor visual bugs in Dashboard 2.0 - #3433 by @dominik-zeglen
-- Display warning if order draft has missing data - #3431 by @dominik-zeglen
-- Add `first_name` and `last_name` fields to the `User` model - #3101 by @fowczarek
-- Add description field to collections - #3435 by @dominik-zeglen
-- Add payment authorize and charge mutation - #3426 by @jxltom
-- Do not show `Pay For Order` if order is partly paid since partial payment is not supported - #3398 by @jxltom
-- Add alt text to `Product` `thumbnail` and `background_image` of `Collection` and `Category` - #3429 by @fowczarek
-- Improve several payment validations - #3418 by @jxltom
-- Fix decimal value argument in GraphQL = #3457 by @fowczarek
-- Add query batching - #3443 by @dominik-zeglen
-- Use autocomplete fields in country selection - #3443 by @dominik-zeglen
-- Add alt text to categories and collections - #3461 by @dominik-zeglen
-- Use first and last name of a customer or staff member in UI - #3247 by @Bonifacy1, @dominik-zeglen
-- Bump `urllib3` and `elasticsearch` to latest versions - #3460 by @maarcingebala
-- Resort imports in tests - #3471 by @jxltom
-- Support sorting products by update date - #3470 by @jxltom
-- Draft order should be able to clear its shipping method - #3472 by @fowczarek
-- Prefetch payment and payment transaction to optimize db queries - #3455 by @jxltom
-- Change filed type to choice field of tax rate in product - #3478 by @fowczarek
-- Update Pipfile.lock - #3480 by @maarcingebala
-- Add Stripe payment gateway - #3408 by @jxltom
-- Remove Elasticsearch from `docker-compose.yml` - #3482 by @maarcingebala
-- Add error page if object was not found - #3463 by @dominik-zeglen
-- Fix simple product's inventory data saving bug - #3474 by @dominik-zeglen
-- Replace `thumbnailUrl` with `thumbnail { url }` - #3484 by @dominik-zeglen
-- Change mutation errors field from [Error] to [Error!] - #3489 by @fowczarek
-- Update favicons to the new style - #3483 by @dominik-zeglen
-- Add publication date to collections - #3369 by @k-brk
-- Resolve to `None` when empty object ID was passed as mutation argument - #3497 by @maarcingebala
-- Change "Feature on Homepage" switch behavior - #3481 by @dominik-zeglen
-- Expand payment section in order view - #3502 by @dominik-zeglen
-- Fixed migrations for default currency - #3235 by @bykof
+
+- Use USERNAME_FIELD instead of hard-code email field when resolving user - #3577 by @jxltom
+- Support returning user's checkouts in GraphQL API - #3578 by @fowczarek
+- Catch GraphqQL syntax errors and output it to errors field - #3576 by @jxltom
+- Fix bug that quantity and variant id of CheckoutLineInput should be required - #3592 by @jxltom
+- Register celery task for updating exchange rates - #3599 by @jxltom
+- Order by id by default for CartLine - #3593 by @jxltom
+- Fix bug where products in homepage should be visible to request.user instead of anonymous user - #3598 by @jxltom
+- Simplify mutation's error checking - #3589 by @dominik-zeglen
+- Add checkout assignment to the logged in customer - #3587 by @fowczarek
+- Refactor `clean_instance`, so it does not returns errors anymore - #3597 by @akjanik
+- Fix logo placement - #3602 by @dominik-zeglen
+- Add charges taxes on shipping field to shop settings in GraphQL Api - #3603 by @fowczarek
+- Make order fields sequence same as dashboard 2.0 - #3606 by @jxltom
+- Fix bug where orders can not be filtered by payment status - #3608 by @jxltom
+- Fix logo placement in dashboard 2.0 when the svg has specific width - #3609 by @jxltom
+- Support get correct payment status for order without any payments - #3605 by @jxltom
+- Continue fixing logo placement in storefront 1.0 and dashboard 2.0's login page - #3616 by @jxltom
+- Refactor checkout mutations - #3610 by @fowczarek
+- Add drag'n'drop image upload - #3611 by @dominik-zeglen
+- Throw typescript errors while snapshotting - #3611 by @dominik-zeglen
+- Fix order cancelling - #3624 by @dominik-zeglen
+- Unify grid handling - #3520 by @dominik-zeglen
+- Refactor payments - #3519 by @michaljelonek
+- Fix bug where product variant can not have attributes with same slug - #3626 by @jxltom
+- Add missing migrations for tax rate choices - #3629 by @jxltom
+- Validate files uploaded in API in a unified way - #3633 by @fowczarek
+- Add ShopFetchTaxRates mutation - #3622 by @fowczarek
+- Add taxes section - #3622 by @dominik-zeglen
+- Expose in API list of supported payment gateways - #3639 by @fowczarek
+- Display payment status in account order list page and account order detail page - #3637 by @jxltom
+- Fix bug where node order is not preserved in GraphQL API - #3632 by @jxltom
+- Support set arbitary charge status for dummy gateway in storefront 1.0 - #3648 by @jxltom
+- Fix typo in the definition of order UNFULFILLED status - #3649 by @jxltom
+- Add missing margin for order notes section - #3650 by @jxltom
+- Infer default transaction kind from operation type instead of passing it manually  - #3646 by @jxltom
+- Set shipping required as default for product type - #3655 by @jxltom
+- Docker and compose improvements - #3657 by @michaljelonek
+- Fix TypeError on calling get_client_token - #3660 by @michaljelonek
+- Fix countries in Voucher - #3664 by @michaljelonek
+- Make tokenCreate errors return [] when there are no errors - #3666 by @michaljelonek

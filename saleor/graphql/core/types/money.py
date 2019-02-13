@@ -3,8 +3,7 @@ from textwrap import dedent
 import graphene
 from django_prices.templatetags import prices_i18n
 
-from ....core import TaxRateType as TaxRates
-from ..utils import str_to_enum
+from ..enums import TaxRateType
 
 
 class Money(graphene.ObjectType):
@@ -62,7 +61,8 @@ class VAT(graphene.ObjectType):
     reduced_rates = graphene.List(
         lambda: ReducedRate,
         description=dedent('''
-        Country\'s VAT rate exceptions for specific types of goods.'''))
+        Country\'s VAT rate exceptions for specific types of goods.'''),
+        required=True)
 
     class Meta:
         description = 'Represents a VAT rate for a country.'
@@ -80,13 +80,8 @@ class VAT(graphene.ObjectType):
 class ReducedRate(graphene.ObjectType):
     rate = graphene.Float(
         description='Reduced VAT rate in percent.', required=True)
-    rate_type = graphene.String(description='A type of goods.', required=True)
+    rate_type = TaxRateType(description='A type of goods.', required=True)
 
     class Meta:
         description = dedent('''
         Represents a reduced VAT rate for a particular type of goods.''')
-
-
-TaxRateType = graphene.Enum(
-    'TaxRateType',
-    [(str_to_enum(rate[0]), rate[0]) for rate in TaxRates.CHOICES])

@@ -31,7 +31,9 @@ from ...order.models import Fulfillment, Order
 from ...order.utils import update_order_status
 from ...page.models import Page
 from ...payment.models import Payment
-from ...payment.utils import get_billing_data
+from ...payment.utils import (
+    gateway_authorize, gateway_capture, gateway_refund, gateway_void,
+    get_billing_data)
 from ...product.models import (
     Attribute, AttributeValue, Category, Collection, Product, ProductImage,
     ProductType, ProductVariant)
@@ -183,6 +185,8 @@ def create_products(products_data, placeholder_dir, create_images):
         defaults['weight'] = get_weight(defaults['weight'])
         defaults['category_id'] = defaults.pop('category')
         defaults['product_type_id'] = defaults.pop('product_type')
+        defaults['price'] = get_in_default_currency(
+            defaults, 'price', settings.DEFAULT_CURRENCY)
         defaults['attributes'] = json.loads(defaults['attributes'])
         product, _ = Product.objects.update_or_create(pk=pk, defaults=defaults)
 
@@ -203,7 +207,17 @@ def create_product_variants(variants_data):
             continue
         defaults['product_id'] = product_id
         defaults['attributes'] = json.loads(defaults['attributes'])
+        defaults['price_override'] = get_in_default_currency(
+            defaults, 'price_override', settings.DEFAULT_CURRENCY)
+        defaults['cost_price'] = get_in_default_currency(
+            defaults, 'cost_price', settings.DEFAULT_CURRENCY)
         ProductVariant.objects.update_or_create(pk=pk, defaults=defaults)
+
+
+def get_in_default_currency(defaults, field, currency):
+    if field in defaults and defaults[field] is not None:
+        return Money(defaults[field].amount, currency)
+    return None
 
 
 def create_products_by_schema(placeholder_dir, create_images):
@@ -311,19 +325,19 @@ def create_payment(mock_email_confirmation, order):
         **get_billing_data(order))
 
     # Create authorization transaction
-    payment.authorize(payment.token)
+    gateway_authorize(payment, payment.token)
     # 20% chance to void the transaction at this stage
     if random.choice([0, 0, 0, 0, 1]):
-        payment.void()
+        gateway_void(payment)
         return payment
     # 25% to end the payment at the authorization stage
     if not random.choice([1, 1, 1, 0]):
         return payment
     # Create capture transaction
-    payment.capture()
+    gateway_capture(payment)
     # 25% to refund the payment
     if random.choice([0, 0, 0, 1]):
-        payment.refund()
+        gateway_refund(payment)
     return payment
 
 

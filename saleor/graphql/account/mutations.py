@@ -12,8 +12,9 @@ from ...core.permissions import MODELS_PERMISSIONS, get_permissions
 from ...dashboard.staff.utils import remove_staff_member
 from ..account.i18n import I18nMixin
 from ..account.types import AddressInput, User
+from ..core.enums import PermissionEnum
 from ..core.mutations import BaseMutation, ModelDeleteMutation, ModelMutation
-from ..core.types import Error, PermissionEnum
+from ..core.types import Error
 
 
 def send_user_password_reset_email(user, site):
@@ -189,7 +190,6 @@ class UserDelete(ModelDeleteMutation):
         elif instance.is_superuser:
             cls.add_error(
                 errors, 'id', 'Only superuser can delete his own account.')
-        return errors
 
 
 class CustomerDelete(UserDelete):
@@ -210,7 +210,6 @@ class CustomerDelete(UserDelete):
         super().clean_instance(info, instance, errors)
         if instance.is_staff:
             cls.add_error(errors, 'id', 'Cannot delete a staff account.')
-        return errors
 
 
 class StaffCreate(ModelMutation):
@@ -314,7 +313,6 @@ class StaffDelete(UserDelete):
         if not instance.is_staff:
             cls.add_error(
                 errors, 'id', 'Cannot delete a non-staff user.')
-        return errors
 
     @classmethod
     def mutate(cls, root, info, **data):

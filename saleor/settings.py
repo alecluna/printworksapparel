@@ -59,6 +59,7 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en'
 LANGUAGES = [
     ('ar', _('Arabic')),
+    ('az', _('Azerbaijani')),
     ('bg', _('Bulgarian')),
     ('bn', _('Bengali')),
     ('ca', _('Catalan')),
@@ -69,6 +70,7 @@ LANGUAGES = [
     ('es', _('Spanish')),
     ('fa', _('Persian')),
     ('fr', _('French')),
+    ('hi', _('Hindi')),
     ('hu', _('Hungarian')),
     ('it', _('Italian')),
     ('ja', _('Japanese')),
@@ -376,7 +378,7 @@ bootstrap4 = {
 TEST_RUNNER = 'tests.runner.PytestTestRunner'
 
 ALLOWED_HOSTS = get_list(
-    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1'))
+    os.environ.get('ALLOWED_HOSTS','localhost, 127.0.0.1, 5ec7b33f.ngrok.io'))
 ALLOWED_GRAPHQL_ORIGINS = os.environ.get('ALLOWED_GRAPHQL_ORIGINS', '*')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
