@@ -31,5 +31,6 @@ dist/
 /node_modules/
 /static/
 webpack-bundle.json
+build_project
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
