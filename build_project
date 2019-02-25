@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export SECRET_KEY='stingersup'
+pg_ctl -D /usr/local/var/postgres start
+python3 manage.py migrate
+python3 manage.py runserver
