@@ -30,6 +30,8 @@ dist/
 /media/
 /node_modules/
 /static/
+/printworks
+/saleor/static/assets
 webpack-bundle.json
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
