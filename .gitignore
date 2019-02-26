@@ -35,3 +35,6 @@ webpack-bundle.json
 build_project
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
+Makefile
+=3
+
