@@ -11,9 +11,7 @@
               <div class="home--content-inner">
                 <h1>{% trans "PRINTWORKS APPAREL" context "Homepage title" %}</h1>
                 <h2>{% trans "Custom Printing" context "Homepage title" %}</h2>
-                  <a class="btn btn-secondary home__button" href="#">
-                    {% trans "Request a Quote" context "Homepage action" %}
-                  </a>
+                  <a class="btn btn-secondary home__button" href="{% url "page:details" slug="about" %}">Request a Quote</a>
               </div>
             </div>
           </div>
