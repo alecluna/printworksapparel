@@ -111,17 +111,18 @@
       </div>
     </div>
     </div>
-    <div class="navbar__brand container-fluid d-block">
+    <div class="navbar__brand container-fluid d-block" style="text-align:center;">
+      <a href="{% url 'home' %}">
+              <svg data-src="{% static "images/pw_logo.svg"  %}" width="25%" height="25%" />
+              <!-- <img src="{% static "images/printworkslogo.PNG" %}"/> -->
+            </a>
       <div class="container">
         <div class="row no-gutters">
           <div class="col-8 col-md-4 navbar__logo">
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
-              <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
+              <svg data-src="{% static "images/mobile-menu.svg" %}" width="50px" height="30px"/>
             </div>
-            <a href="{% url 'home' %}">
-              <svg data-src="{% static "images/pw_logo.svg" %}"/>
-              <!-- <img src="{% static "images/printworkslogo.PNG" %}"/> -->
-            </a>
+            
           </div>
           <div class="col-2 col-md-5 navbar__search static">
             {% if SEARCH_IS_ENABLED %}
