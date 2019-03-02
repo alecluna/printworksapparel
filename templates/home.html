@@ -52,25 +52,24 @@
     <!-- {% include "product/_items.html" %} Django code to render dummy data commented out  -->
     <h1 style="margin-top: 5%;" class="text-center">
       {% trans "Featured products" context "Homepage title" %}
-      <ul
-        style="display: flex; justify-content: center; align-items: center; list-style: none"
-      >
-        <li>
-          <img class="home__tee" alt="tee" width="500" height="600" />
-        </li>
-        <li>
-          <img
-            class="home__longsleeve"
-            alt="longsleeve"
-            width="500"
-            height="600"
-          />
-        </li>
-        <li>
-          <img class="home__hoodie" alt="hoodie" width="500" height="600" />
-        </li>
-      </ul>
     </h1>
+
+    <ul
+      style="display: flex; justify-content: center; align-items: center; list-style: none"
+    >
+      <li>
+        <div class="home__tee">
+          <!-- <div class="home--square"></div>
+          <div class="home--content">tets</div> -->
+        </div>
+      </li>
+      <li>
+        <img class="home__longsleeve" alt="longsleeve" />
+      </li>
+      <li>
+        <img class="home__hoodie" alt="hoodie" />
+      </li>
+    </ul>
   </div>
   {% endif %}
   <script

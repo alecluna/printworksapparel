@@ -120,11 +120,6 @@ module.exports = (env, argv) => {
             resolve('saleor/static/images'),
             resolve('saleor/static/dashboard/images')
           ]
-        },
-        {
-          test: /\.png$/,
-          exclude: /node_modules/,
-          loader: 'file-loader?name=[name]/[name].[hash].[ext]'
         }
       ]
     },

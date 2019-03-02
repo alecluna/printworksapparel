@@ -63,7 +63,9 @@
     }
   }
   &__tee {
-    background-image: url("../images/tee.png");
+    .home--square {
+      background-image: url("../images/tee.png");
+    }
   }
   &__longsleeve {
     background-image: url("../images/longsleeve.png");
