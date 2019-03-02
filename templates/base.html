@@ -125,43 +125,6 @@
               <!-- <img src="{% static "images/printworkslogo.PNG" %}"/> -->
             </a>
           </div>
-          <div class="col-2 col-md-5 navbar__search static">
-            {% if SEARCH_IS_ENABLED %}
-            <div class="d-md-none mobile-search-icon">
-              <svg data-src="{% static "images/search.svg" %}" width="30" height="30" />
-            </div>
-            <form class="form-inline search-form" action="{% url "search:search" %}">
-              <div class="mobile-close-search d-md-none">
-                <svg data-src="{% static "images/close.svg" %}" width="30" height="30" />
-              </div>
-              <input class="form-control" type="text" name="q" value="{% if query %}{{ query }}{% endif %}"
-                placeholder="{% trans "Search for product" %}" required>
-              <button class="btn btn-primary" type="submit">
-                {% trans "Search" %} <svg data-src="{% static "images/search.svg" %}" width="18" height="18" />
-              </button>
-            </form>
-            {% endif %}
-          </div>
-          <div class="col-2 col-md-3">
-            <div class="navbar__brand__cart float-right">
-              <a rel="nofollow" class="cart__icon" href="{% url "cart:index" %}">
-                <span class="cart-label d-none d-md-inline-block">
-                  {% trans "Your Cart" context "Main navigation item" %}
-                </span>
-                <div class="navbar__brand__cart__icon">
-                  <svg data-src="{% static "images/cart.svg" %}" width="24" height="24" />
-                </div>
-                <span class="badge {% if not cart_counter %}empty{% endif %}">
-                  {% if cart_counter %}
-                  {{ cart_counter }}
-                  {% else %}
-                  0
-                  {% endif %}
-                </span>
-              </a>
-              <div class="cart-dropdown d-none">
-                {% include 'cart_dropdown.html' %}
-              </div>
             </div>
           </div>
         </div>
