@@ -53,13 +53,22 @@
     <h1 style="margin-top: 5%;" class="text-center">
       {% trans "Featured products" context "Homepage title" %}
       <ul
-        style="display: flex; justify-content: center; align-item: center; list-style: none"
+        style="display: flex; justify-content: center; align-items: center; list-style: none"
       >
-        <li><img src="../saleor/static/images/tee.png" alt="tee" /></li>
         <li>
-          <img src="../saleor/static/images/longsleeve.png" alt="longsleeve" />
+          <img class="home__tee" alt="tee" width="500" height="600" />
         </li>
-        <li><img src="../saleor/static/images/hoodie.png" alt="hoodie" /></li>
+        <li>
+          <img
+            class="home__longsleeve"
+            alt="longsleeve"
+            width="500"
+            height="600"
+          />
+        </li>
+        <li>
+          <img class="home__hoodie" alt="hoodie" width="500" height="600" />
+        </li>
       </ul>
     </h1>
   </div>

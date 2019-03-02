@@ -12,20 +12,20 @@
     margin-top: $global-margin;
   }
   &--content-wrapper {
-     display: table;
-     width: 100%;
-     height: 100%;
+    display: table;
+    width: 100%;
+    height: 100%;
   }
   &--content-inner {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      color: white;
-      padding-left: $global-padding;
-      padding-right: $global-padding;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    padding-left: $global-padding;
+    padding-right: $global-padding;
   }
   &--content {
-    position:  absolute;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -42,7 +42,7 @@
   }
   &__block1 {
     .home--square {
-      background-image: url('../images/block1.png');
+      background-image: url("../images/block1.png");
       @include media-breakpoint-up(md) {
         &:before {
           padding-top: 50%;
@@ -53,14 +53,23 @@
   &__block2 {
     margin-top: $global-margin * 2;
     .home--square {
-      background-image: url('../images/block2.png');
+      background-image: url("../images/block2.png");
     }
   }
   &__block3 {
     margin-top: $global-margin * 2;
     .home--square {
-      background-image: url('../images/block3.png');
+      background-image: url("../images/block3.png");
     }
+  }
+  &__tee {
+    background-image: url("../images/tee.png");
+  }
+  &__longsleeve {
+    background-image: url("../images/longsleeve.png");
+  }
+  &__hoodie {
+    background-image: url("../images/hoodie.png");
   }
   &__featured {
     color: $body-color;
