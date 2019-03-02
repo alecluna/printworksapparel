@@ -46,6 +46,15 @@
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style>
+    .footer-social-img{
+      width: 40px;
+      height: 40px;
+      padding-right: 80px;
+      padding-bottom: 60px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -178,14 +187,22 @@
           <div class="offset-md-2 col-md-4 col">
             <div class="footer__menus__social-container">
               <div class="footer__menus__social">
-                <a target="_blank" rel="noopener" class="social-footer"
+                <a class="footer-social-img" target="_blank" rel="noopener"
                   href="https://www.yelp.com/biz/print-works-elk-grove">
-                  <svg data-src="{% static "images/yelp-logo.svg" %}" width="45px" height="45px" />
+                  <img src="{% static "images/yelp-logo.png" %}" width="40" height="40" hspace="10">
                 </a>
-                <a target="_blank" rel="noopener" class="social-footer"
-                  href="https://www.instagram.com/explore/tags/mirumee/">
-                  <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px" />
+                <a class="footer-social-img" target="_blank" rel="noopener"
+                  href="https://www.instagram.com/printworksapparel/?hl=en">
+                  <img src="{% static "images/instagram-logo.png" %}" width="40" height="40" hspace="10">
                 </a>
+                <a class="footer-social-img" target="_blank" rel="noopener"
+                href="https://www.instagram.com/printworksapparel/?hl=en">
+                <img src="{% static "images/instagram-logo-2.png" %}" width="40" height="40" hspace="10">
+              </a>
+              <a class="footer-social-img" target="_blank" rel="noopener"
+              href="https://www.instagram.com/printworksapparel/?hl=en">
+              <img src="{% static "images/yelp-logo-2.png" %}" width="35" height="40" hspace="10">
+            </a>
               </div>
             </div>
           </div>
@@ -196,13 +213,11 @@
     <div class="footer__copy">
       <div class="container">
         <div class="row">
-          <div class="col-1 col-md-4">
+          <!-- <div class="col-1 col-md-4">
             <a href="{% url 'home' %}" class="footer__logo float-md-left">
-              <!-- <svg data-src="{% static "images/printworkslogo.svg" %}"/> -->
-              <img src="{% static "images/footer_logo.png" %}" />
+              <svg data-src="{% static "images/printworkslogo.svg" %}"/>
             </a>
-          </div>
-          <!-- <div class="col-8 footer__copy-text">COPYRIGHT © 2009–2019 MIRUMEE SOFTWARE</div> -->
+          </div> -->
         </div>
       </div>
     </div>
