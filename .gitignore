@@ -37,6 +37,7 @@ build_project
 !/templates/templated_email/compiled/.gitkeep
 <<<<<<< HEAD
 /saleor/static/assets/
+/saleor/settings.py
 =======
 Makefile
 =3
