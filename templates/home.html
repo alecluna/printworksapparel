@@ -44,28 +44,6 @@
         </div>
       </div>
     </div>
-    <form>
-  <div class="form-group">
-    <label for="Email">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <label for="exampleInputPassword1">Phone</label>
-    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
-    <label for="Quantity">Quantity</label>
-    <input type="number" class="form-control" id="Quantity" placeholder="Quantity">
-   </div>
-     <button class="Style" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Style
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">T-Shirt</a>
-    <a class="dropdown-item" href="#">Tank Top</a>
-    <a class="dropdown-item" href="#">Hoodie</a>
-  </div>
-  <div> 
-  <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
-</div>
     {% if products %}
       <div class="home__featured">
         <h2 class="text-center">{% trans "Featured products" context "Homepage title" %}</h2>
