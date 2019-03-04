@@ -30,7 +30,15 @@ dist/
 /media/
 /node_modules/
 /static/
+/saleor/static/assets/
 webpack-bundle.json
+build_project
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
+<<<<<<< HEAD
 /saleor/static/assets/
+=======
+Makefile
+=3
+
+>>>>>>> 84b7c8428bee9684ec7ad5e1c44aac6779835499
