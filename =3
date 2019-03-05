@@ -1,0 +1,72 @@
+Collecting package metadata: ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /anaconda3/envs/printworks
+
+  added / updated specs:
+    - python
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2019.1.23  |                0         126 KB
+    certifi-2018.11.29         |           py37_0         145 KB
+    libcxx-4.0.1               |       hcfea43d_1         1.2 MB
+    libcxxabi-4.0.1            |       hcfea43d_1         458 KB
+    libedit-3.1.20181209       |       hb402a30_0         159 KB
+    ncurses-6.1                |       h0a44026_1         887 KB
+    openssl-1.1.1a             |       h1de35cc_0         4.6 MB
+    pip-19.0.1                 |           py37_0         1.8 MB
+    python-3.7.2               |       haf84260_0        21.6 MB
+    readline-7.0               |       h1de35cc_5         393 KB
+    setuptools-40.8.0          |           py37_0         643 KB
+    sqlite-3.26.0              |       ha441bb4_0         2.3 MB
+    tk-8.6.8                   |       ha441bb4_0         3.2 MB
+    wheel-0.32.3               |           py37_0          34 KB
+    zlib-1.2.11                |       h1de35cc_3         105 KB
+    ------------------------------------------------------------
+                                           Total:        37.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  ca-certificates    pkgs/main/osx-64::ca-certificates-2019.1.23-0
+  certifi            pkgs/main/osx-64::certifi-2018.11.29-py37_0
+  libcxx             pkgs/main/osx-64::libcxx-4.0.1-hcfea43d_1
+  libcxxabi          pkgs/main/osx-64::libcxxabi-4.0.1-hcfea43d_1
+  libedit            pkgs/main/osx-64::libedit-3.1.20181209-hb402a30_0
+  libffi             pkgs/main/osx-64::libffi-3.2.1-h475c297_4
+  ncurses            pkgs/main/osx-64::ncurses-6.1-h0a44026_1
+  openssl            pkgs/main/osx-64::openssl-1.1.1a-h1de35cc_0
+  pip                pkgs/main/osx-64::pip-19.0.1-py37_0
+  python             pkgs/main/osx-64::python-3.7.2-haf84260_0
+  readline           pkgs/main/osx-64::readline-7.0-h1de35cc_5
+  setuptools         pkgs/main/osx-64::setuptools-40.8.0-py37_0
+  sqlite             pkgs/main/osx-64::sqlite-3.26.0-ha441bb4_0
+  tk                 pkgs/main/osx-64::tk-8.6.8-ha441bb4_0
+  wheel              pkgs/main/osx-64::wheel-0.32.3-py37_0
+  xz                 pkgs/main/osx-64::xz-5.2.4-h1de35cc_4
+  zlib               pkgs/main/osx-64::zlib-1.2.11-h1de35cc_3
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+ncurses-6.1          | 887 KB    |            |   0% ncurses-6.1          | 887 KB    | 1          |   1% ncurses-6.1          | 887 KB    | ##1        |  22% ncurses-6.1          | 887 KB    | ######7    |  68% ncurses-6.1          | 887 KB    | ########4  |  85% ncurses-6.1          | 887 KB    | #########7 |  98% ncurses-6.1          | 887 KB    | ########## | 100% 
+certifi-2018.11.29   | 145 KB    |            |   0% certifi-2018.11.29   | 145 KB    | 8          |   8% certifi-2018.11.29   | 145 KB    | ###3       |  33% certifi-2018.11.29   | 145 KB    | ########## | 100% 
+setuptools-40.8.0    | 643 KB    |            |   0% 
+libedit-3.1.20181209 | 159 KB    |            |   0% libedit-3.1.20181209 | 159 KB    | 7          |   8% libedit-3.1.20181209 | 159 KB    | ########## | 100% 
+wheel-0.32.3         | 34 KB     |            |   0% wheel-0.32.3         | 34 KB     | ###4       |  35% wheel-0.32.3         | 34 KB     | ########## | 100% 
+ca-certificates-2019 | 126 KB    |            |   0% ca-certificates-2019 | 126 KB    | ########## | 100% 
+readline-7.0         | 393 KB    |            |   0% readline-7.0         | 393 KB    | #####7     |  58% readline-7.0         | 393 KB    | ########1  |  81% 
+sqlite-3.26.0        | 2.3 MB    |            |   0% sqlite-3.26.0        | 2.3 MB    | 6          |   7% sqlite-3.26.0        | 2.3 MB    | #9         |  20% sqlite-3.26.0        | 2.3 MB    | ###4       |  34% sqlite-3.26.0        | 2.3 MB    | ####7      |  47% sqlite-3.26.0        | 2.3 MB    | ######     |  61% sqlite-3.26.0        | 2.3 MB    | #######4   |  75% sqlite-3.26.0        | 2.3 MB    | ########6  |  86% sqlite-3.26.0        | 2.3 MB    | #########6 |  96% sqlite-3.26.0        | 2.3 MB    | ########## | 100% 
+zlib-1.2.11          | 105 KB    |            |   0% zlib-1.2.11          | 105 KB    | #1         |  11% zlib-1.2.11          | 105 KB    | ####5      |  46% zlib-1.2.11          | 105 KB    | ########## | 100% 
+openssl-1.1.1a       | 4.6 MB    |            |   0% openssl-1.1.1a       | 4.6 MB    | 6          |   6% openssl-1.1.1a       | 4.6 MB    | #2         |  12% openssl-1.1.1a       | 4.6 MB    | ##         |  20% openssl-1.1.1a       | 4.6 MB    | ##6        |  27% openssl-1.1.1a       | 4.6 MB    | ###2       |  32% openssl-1.1.1a       | 4.6 MB    | ###9       |  40% openssl-1.1.1a       | 4.6 MB    | ####8      |  48% openssl-1.1.1a       | 4.6 MB    | #####5     |  56% openssl-1.1.1a       | 4.6 MB    | ######3    |  63% openssl-1.1.1a       | 4.6 MB    | #######    |  70% openssl-1.1.1a       | 4.6 MB    | #######7   |  77% openssl-1.1.1a       | 4.6 MB    | ########2  |  83% openssl-1.1.1a       | 4.6 MB    | ########7  |  88% openssl-1.1.1a       | 4.6 MB    | #########1 |  91% openssl-1.1.1a       | 4.6 MB    | #########4 |  95% openssl-1.1.1a       | 4.6 MB    | #########8 |  98% openssl-1.1.1a       | 4.6 MB    | ########## | 100% 
+tk-8.6.8             | 3.2 MB    |            |   0% tk-8.6.8             | 3.2 MB    |            |   0% tk-8.6.8             | 3.2 MB    | 3          |   3% tk-8.6.8             | 3.2 MB    | #4         |  14% tk-8.6.8             | 3.2 MB    | ##3        |  23% tk-8.6.8             | 3.2 MB    | ###8       |  39% tk-8.6.8             | 3.2 MB    | ####9      |  49% tk-8.6.8             | 3.2 MB    | ######     |  61% tk-8.6.8             | 3.2 MB    | #######5   |  75% tk-8.6.8             | 3.2 MB    | ########6  |  86% tk-8.6.8             | 3.2 MB    | #########4 |  94% tk-8.6.8             | 3.2 MB    | ########## | 100% 
+pip-19.0.1           | 1.8 MB    |            |   0% pip-19.0.1           | 1.8 MB    | #          |  11% pip-19.0.1           | 1.8 MB    | ##5        |  26% pip-19.0.1           | 1.8 MB    | ###8       |  39% pip-19.0.1           | 1.8 MB    | #####5     |  56% pip-19.0.1           | 1.8 MB    | ######9    |  69% pip-19.0.1           | 1.8 MB    | ########   |  80% pip-19.0.1           | 1.8 MB    | ########9  |  90% pip-19.0.1           | 1.8 MB    | #########7 |  97% pip-19.0.1           | 1.8 MB    | ########## | 100% 
+libcxx-4.0.1         | 1.2 MB    |            |   0% libcxx-4.0.1         | 1.2 MB    | 7          |   8% libcxx-4.0.1         | 1.2 MB    | #9         |  20% libcxx-4.0.1         | 1.2 MB    | ###9       |  39% libcxx-4.0.1         | 1.2 MB    | ####9      |  49% libcxx-4.0.1         | 1.2 MB    | #######    |  71% libcxx-4.0.1         | 1.2 MB    | ########3  |  84% libcxx-4.0.1         | 1.2 MB    | #########5 |  95% libcxx-4.0.1         | 1.2 MB    | ########## | 100% 
+python-3.7.2         | 21.6 MB   |            |   0% python-3.7.2         | 21.6 MB   |            |   0% python-3.7.2         | 21.6 MB   |            |   0% python-3.7.2         | 21.6 MB   |            |   1% python-3.7.2         | 21.6 MB   | 1          |   2% python-3.7.2         | 21.6 MB   | 2          |   3% python-3.7.2         | 21.6 MB   | 3          |   3% python-3.7.2         | 21.6 MB   | 4          |   4% python-3.7.2         | 21.6 MB   | 5          |   5% python-3.7.2         | 21.6 MB   | 6          |   6% python-3.7.2         | 21.6 MB   | 7          |   7% python-3.7.2         | 21.6 MB   | 7          |   8% python-3.7.2         | 21.6 MB   | 8          |   9% python-3.7.2         | 21.6 MB   | 9          |  10% python-3.7.2         | 21.6 MB   | #          |  11% python-3.7.2         | 21.6 MB   | #2         |  12% python-3.7.2         | 21.6 MB   | #2         |  13% python-3.7.2         | 21.6 MB   | #3         |  14% python-3.7.2         | 21.6 MB   | #4         |  15% python-3.7.2         | 21.6 MB   | #5         |  15% python-3.7.2         | 21.6 MB   | #6         |  16% python-3.7.2         | 21.6 MB   | #7         |  17% python-3.7.2         | 21.6 MB   | #7         |  18% python-3.7.2         | 21.6 MB   | #8         |  19% python-3.7.2         | 21.6 MB   | #9         |  19% python-3.7.2         | 21.6 MB   | ##         |  20% python-3.7.2         | 21.6 MB   | ##1        |  21% python-3.7.2         | 21.6 MB   | ##1        |  22% python-3.7.2         | 21.6 MB   | ##2        |  23% python-3.7.2         | 21.6 MB   | ##4        |  24% python-3.7.2         | 21.6 MB   | ##5        |  25% python-3.7.2         | 21.6 MB   | ##6        |  27% python-3.7.2         | 21.6 MB   | ##8        |  28% python-3.7.2         | 21.6 MB   | ##9        |  30% python-3.7.2         | 21.6 MB   | ###1       |  31% python-3.7.2         | 21.6 MB   | ###2       |  32% python-3.7.2         | 21.6 MB   | ###3       |  34% python-3.7.2         | 21.6 MB   | ###5       |  35% python-3.7.2         | 21.6 MB   | ###6       |  37% python-3.7.2         | 21.6 MB   | ###7       |  38% python-3.7.2         | 21.6 MB   | ###8       |  39% python-3.7.2         | 21.6 MB   | ####       |  40% python-3.7.2         | 21.6 MB   | ####1      |  41% python-3.7.2         | 21.6 MB   | ####2      |  42% python-3.7.2         | 21.6 MB   | ####3      |  43% python-3.7.2         | 21.6 MB   | ####4      |  45% python-3.7.2         | 21.6 MB   | ####5      |  46% python-3.7.2         | 21.6 MB   | ####7      |  47% python-3.7.2         | 21.6 MB   | ####8      |  48% python-3.7.2         | 21.6 MB   | ####9      |  49% python-3.7.2         | 21.6 MB   | #####      |  51% python-3.7.2         | 21.6 MB   | #####1     |  52% python-3.7.2         | 21.6 MB   | #####3     |  53% python-3.7.2         | 21.6 MB   | #####4     |  54% python-3.7.2         | 21.6 MB   | #####5     |  55% python-3.7.2         | 21.6 MB   | #####6     |  57% python-3.7.2         | 21.6 MB   | #####7     |  58% python-3.7.2         | 21.6 MB   | #####8     |  59% python-3.7.2         | 21.6 MB   | #####9     |  60% python-3.7.2         | 21.6 MB   | ######     |  61% python-3.7.2         | 21.6 MB   | ######1    |  62% python-3.7.2         | 21.6 MB   | ######2    |  63% python-3.7.2         | 21.6 MB   | ######3    |  63% python-3.7.2         | 21.6 MB   | ######4    |  64% python-3.7.2         | 21.6 MB   | ######4    |  65% python-3.7.2         | 21.6 MB   | ######5    |  66% python-3.7.2         | 21.6 MB   | ######6    |  67% python-3.7.2         | 21.6 MB   | ######7    |  68% python-3.7.2         | 21.6 MB   | ######8    |  69% python-3.7.2         | 21.6 MB   | #######    |  70% python-3.7.2         | 21.6 MB   | #######1   |  71% python-3.7.2         | 21.6 MB   | #######2   |  72% python-3.7.2         | 21.6 MB   | #######3   |  73% python-3.7.2         | 21.6 MB   | #######4   |  75% python-3.7.2         | 21.6 MB   | #######5   |  76% python-3.7.2         | 21.6 MB   | #######7   |  77% python-3.7.2         | 21.6 MB   | #######8   |  78% python-3.7.2         | 21.6 MB   | #######9   |  79% python-3.7.2         | 21.6 MB   | #######9   |  80% python-3.7.2         | 21.6 MB   | ########   |  80% python-3.7.2         | 21.6 MB   | ########1  |  81% python-3.7.2         | 21.6 MB   | ########2  |  82% python-3.7.2         | 21.6 MB   | ########2  |  83% python-3.7.2         | 21.6 MB   | ########3  |  83% python-3.7.2         | 21.6 MB   | ########3  |  84% python-3.7.2         | 21.6 MB   | ########4  |  84% python-3.7.2         | 21.6 MB   | ########4  |  85% python-3.7.2         | 21.6 MB   | ########5  |  85% python-3.7.2         | 21.6 MB   | ########5  |  86% python-3.7.2         | 21.6 MB   | ########6  |  86% python-3.7.2         | 21.6 MB   | ########6  |  87% python-3.7.2         | 21.6 MB   | ########7  |  88% python-3.7.2         | 21.6 MB   | ########8  |  89% python-3.7.2         | 21.6 MB   | ########9  |  90% python-3.7.2         | 21.6 MB   | #########  |  91% python-3.7.2         | 21.6 MB   | #########2 |  92% python-3.7.2         | 21.6 MB   | #########3 |  93% python-3.7.2         | 21.6 MB   | #########3 |  93% 
+libcxxabi-4.0.1      | 458 KB    |            |   0% libcxxabi-4.0.1      | 458 KB    | 2          |   3% libcxxabi-4.0.1      | 458 KB    | ###1       |  31% libcxxabi-4.0.1      | 458 KB    | ########4  |  85% libcxxabi-4.0.1      | 458 KB    | ########## | 100% 
