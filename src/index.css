@@ -1,9 +1,9 @@
-body{
+body {
   /* font-family: 'Roboto', sans-serif; */
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
-#preface{
+#preface {
   font-size: 10px;
   padding-top: 1%;
   padding-left: 10%;
@@ -11,38 +11,45 @@ body{
   margin-bottom: -10px;
 }
 
-.navbar-logo{
+.navbar-logo {
   background: center no-repeat;
   background-image: url("images/logo.svg");
   height: auto;
   width: 200px;
 }
 
-.nav-item{
+.nav-item {
   padding: 6em 4em 6em 4em;
 }
 
 .logo {
-    margin: 0;
+  margin: 0;
 }
 
-.footer-title{
+.footer-title {
   font-size: 15px;
 }
-.footer-info-menu{
+.footer-info-menu {
   margin-left: 10%;
   margin-bottom: 2%;
   margin-top: 1%;
 }
-.footer p{
+.footer p {
   font-size: 12px;
-  margin:0 !important;
+  margin: 0 !important;
 }
 
-.footer img{
+#ig,
+#yelp {
   width: 30px;
   height: 30px;
 }
-.footer-social-img{
+
+.footer-social-img {
   padding-top: 40px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
 }
