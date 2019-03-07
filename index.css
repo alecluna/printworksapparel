@@ -1,0 +1,48 @@
+body{
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+#preface{
+  font-size: 10px;
+  padding-top: 1%;
+  padding-left: 10%;
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
+
+.navbar-logo{
+  background: center no-repeat;
+  background-image: url("images/logo.svg");
+  height: auto;
+  width: 200px;
+}
+
+.nav-item{
+  padding: 6em 4em 6em 4em;
+}
+
+.logo {
+    margin: 0;
+}
+
+.footer-title{
+  font-size: 15px;
+}
+.footer-info-menu{
+  margin-left: 10%;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.footer p{
+  font-size: 12px;
+  margin:0 !important;
+}
+
+.footer img{
+  width: 30px;
+  height: 30px;
+}
+.footer-social-img{
+  padding-top: 40px;
+}
