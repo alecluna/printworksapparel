@@ -30,6 +30,13 @@ dist/
 /media/
 /node_modules/
 /static/
+/saleor/static/assets/
 webpack-bundle.json
+build_project
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
+/printworks/
+/saleor/static/assets/
+/saleor/settings.py
+Makefile
+=3
