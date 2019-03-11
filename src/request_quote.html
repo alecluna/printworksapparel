@@ -3,9 +3,10 @@
 <html lang="en">
 
 <head>
-    <title>Printworks Apparel</title>
+    <title>Request a Quote</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/request_quote.css">
+
     <!-- Required/Bootstrap Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,12 +19,12 @@
 </head>
 
 <body>
+    <!-- Begin Header -->
     <div>
         <div id="preface">
             <p>Custom Printing Apparel</p>
         </div>
     </div>
-
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
@@ -34,14 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="about_us.html">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="request_quote.html">Contact Us</a>
                 </li>
-
                 <a class="navbar-logo" href="index.html"></a>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">Apparel</a>
                 </li>
@@ -51,56 +50,52 @@
             </ul>
         </div>
     </nav>
+    <!-- End Header -->
 
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1>Printworks Apparel</h1>
-            <p>Custom Printing Apparel</p>
-            <a class="btn btn-secondary" href="request_quote.html">Req Quote</a>
+    <h1>Request a Quote</h1>
+    <form>
+        <div class="form-group">
+            <p>
+                <font color="black">Email:</font>
+            </p>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <p>
+                <font color="black">Phone:</font>
+            </p>
+            <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
+            <p>
+                <font color="black">Quantity:</font>
+            </p>
+            <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+            <p>
+                <font color="black">Need By:</font>
+            </p>
+            <input type="date" class="form-control" id="needBy" placeholder="Need By">
+            <p>
+                <font color="black">How did you hear about us?</font>
+            </p>
+            <input type="text" class="form-control" id="howHear" placeholder="How did you hear about us?"
+                maxlength="200" />
+            <p>
+                <font color="black">Select a style:</font>
+            </p>
+            <select name="style" size="1" onchange='CheckStyle(this.value);'>
+                <option>Style</option>
+                <option value="tShirt">T-Shirt</option>
+                <option value="longSleeve">Longsleeve T-Shirt</option>
+                <option value="tankTop">Tank Top</option>
+                <option value="hoodie">Hoodie</option>
+                <option value="sportT">Sport T-Shirt</option>
+                <option value="cap">Cap</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" placeholder="Enter a style" name="style" id="style" style='display:none;' />
         </div>
-    </div>
-
-    <div class="tiles">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mt-4">
-                <div class="tile-image">
-                    <div class="tile-text">
-                        <h1>Home</h1>
-                        <a class="btn btn-secondary" href="#">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 mt-4">
-                <div class="tile-image">
-                    <div class="tile-text">
-                        <h1>Best</h1>
-                        <a class="btn btn-secondary" href="#">Best</a>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-    </div>
-
-    <section class="catalog-container">
-        <h3 class="text-center">Some of our most popular blanks</h3>
-            <div class="catalog">
-                ​<picture>
-                    <a href="https://www.sanmar.com/p/3985_AquaticBlue?text=PC54">
-                    <img src="../src/images/tee.png" class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-                <picture>
-                    <a href="https://www.sanmar.com/p/115_CherryRed#?doScrollToGrid=true">
-                        <img src="../src/images/hoodie.png"class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-                <picture>
-                    <a href="https://www.sanmar.com/p/9285_Red?text=BC6008">
-                        <img src="../src/images/croptee.png" class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-            </div>
-    </section>
+    </form>
 
     <!-- Begin Footer -->
     <div class="footer">
