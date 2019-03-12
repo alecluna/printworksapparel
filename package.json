@@ -2,7 +2,7 @@
   "name": "printworksapparel",
   "version": "1.0.0",
   "description": "backend for printworks apparel",
-  "main": "index.js",
+  "main": "getYelpReviews.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lambda-serve": "netlify-lambda serve functions",
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/alecluna/printworksapparel#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "netlify-lambda": "^1.4.2",
+    "request": "^2.88.0"
   }
 }
