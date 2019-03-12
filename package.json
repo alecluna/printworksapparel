@@ -1,0 +1,24 @@
+{
+  "name": "printworksapparel",
+  "version": "1.0.0",
+  "description": "backend for printworks apparel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecluna/printworksapparel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecluna/printworksapparel/issues"
+  },
+  "homepage": "https://github.com/alecluna/printworksapparel#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
