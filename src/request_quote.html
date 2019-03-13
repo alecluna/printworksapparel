@@ -21,41 +21,41 @@
 <body>
     <!-- Begin Header -->
     <div>
-            <div id="preface">
-                <p>Custom Printing Apparel</p>
-            </div>
+        <div id="preface">
+            <p>Custom Printing Apparel</p>
         </div>
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
-                    <li class="nav-item nav-home col">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="about_us.html">About Us</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="request_quote.html">Contact Us</a>
-                    </li>
-                    <a href="index.html" class="nav-logo">
-                            <object data="images/logo.svg" type="image/svg+xml" class="svg"></object>
-                    </a>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Apparel</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Customer Reviews</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- End Header -->
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
+                <li class="nav-item nav-home col">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link" href="request_quote.html">Contact Us</a>
+                </li>
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.svg" type="image/svg+xml" class="svg">
+                </a>
+                <li class="nav-item col">
+                    <a class="nav-link" href="#">Apparel</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link" href="#">Customer Reviews</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Header -->
 
     <h1>Request a Quote</h1> <br>
     <form>
@@ -72,18 +72,9 @@
             <p>How Did You Hear About Us?</p>
             <input type="text" class="form-control" id="howHear" placeholder="How did you hear about us?"
                 maxlength="200" />
-<<<<<<< HEAD
             <p>Select a Style:</p>
             <select class="form-control" name="style" id="style-select" onchange='CheckStyle(this.value);'>
                 <option value="" disabled selected>Style</option>
-=======
-            <p>
-                <font color="black">Select a style:</font>
-            </p>
-            <p>
-            <select name="style" size="1" onchange='CheckStyle(this.value);'>
-                <option>Style</option>
->>>>>>> 6d9cbafcf86fe61a8aa0eafdf685ba948d391832
                 <option value="tShirt">T-Shirt</option>
                 <option value="longSleeve">Longsleeve T-Shirt</option>
                 <option value="tankTop">Tank Top</option>
@@ -92,13 +83,7 @@
                 <option value="cap">Cap</option>
                 <option value="other">Other</option>
             </select>
-<<<<<<< HEAD
             <input type="text" class="form-control" placeholder="Enter a style" name="style" id="style" style='display:none;'/>
-
-=======
-            </p>
-            <input type="text" placeholder="Enter a style" name="style" id="style" style='display:none;' />
->>>>>>> 6d9cbafcf86fe61a8aa0eafdf685ba948d391832
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -128,19 +113,6 @@
         </footer>
     </div>
     <!-- End Footer -->
-<<<<<<< HEAD
-=======
-    <!--Text box if user selects "Other" in quote form-->
-    <script type="text/javascript">
-        function CheckStyle(val){
-         var element=document.getElementById('style');
-         if(val=='other')
-           element.style.display='block';
-         else  
-           element.style.display='none';
-        }
-      </script> 
->>>>>>> 6d9cbafcf86fe61a8aa0eafdf685ba948d391832
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
