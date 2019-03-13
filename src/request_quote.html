@@ -6,8 +6,8 @@
     <title>Request a Quote</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
     <link rel="stylesheet" type="text/css" href="css/request_quote.css">
-
-    <!-- Required/Bootstrap Tags -->
+    <script src="javascript/request_quote.js"></script>
+    <!-- Required/CDN -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -21,67 +21,60 @@
 <body>
     <!-- Begin Header -->
     <div>
-        <div id="preface">
-            <p>Custom Printing Apparel</p>
+            <div id="preface">
+                <p>Custom Printing Apparel</p>
+            </div>
         </div>
-    </div>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
+                    <li class="nav-item nav-home col">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="request_quote.html">Contact Us</a>
+                    </li>
+                    <a href="index.html" class="nav-logo">
+                            <object data="images/logo.svg" type="image/svg+xml" class="svg"></object>
+                    </a>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="#">Apparel</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="#">Customer Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Header -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="about_us.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="request_quote.html">Contact Us</a>
-                </li>
-                <a class="navbar-logo" href="index.html"></a>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Apparel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Customer Reviews</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Header -->
-
-    <h1>Request a Quote</h1>
+    <h1>Request a Quote</h1> <br>
     <form>
         <div class="form-group">
-            <p>
-                <font color="black">Email:</font>
-            </p>
+            <p>Email:</p>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="Enter email">
-            <p>
-                <font color="black">Phone:</font>
-            </p>
+            <p>Phone Number:</p>
             <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
-            <p>
-                <font color="black">Quantity:</font>
-            </p>
-            <input type="number" class="form-control" id="quantity" placeholder="Quantity">
-            <p>
-                <font color="black">Need By:</font>
-            </p>
-            <input type="date" class="form-control" id="needBy" placeholder="Need By">
-            <p>
-                <font color="black">How did you hear about us?</font>
-            </p>
+            <p>Quantity:</p>
+            <input type="number" class="form-control" id="quantity" placeholder="Enter Quantity">
+            <p>Need By:</p>
+            <input type="date" class="form-control" id="needBy" placeholder="Enter Due Date">
+            <p>How Did You Hear About Us?</p>
             <input type="text" class="form-control" id="howHear" placeholder="How did you hear about us?"
                 maxlength="200" />
-            <p>
-                <font color="black">Select a style:</font>
-            </p>
-            <select name="style" size="1" onchange='CheckStyle(this.value);'>
-                <option>Style</option>
+            <p>Select a Style:</p>
+            <select class="form-control" name="style" id="style-select" onchange='CheckStyle(this.value);'>
+                <option value="" disabled selected>Style</option>
                 <option value="tShirt">T-Shirt</option>
                 <option value="longSleeve">Longsleeve T-Shirt</option>
                 <option value="tankTop">Tank Top</option>
@@ -90,7 +83,8 @@
                 <option value="cap">Cap</option>
                 <option value="other">Other</option>
             </select>
-            <input type="text" placeholder="Enter a style" name="style" id="style" style='display:none;' />
+            <input type="text" class="form-control" placeholder="Enter a style" name="style" id="style" style='display:none;'/>
+
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -120,7 +114,6 @@
         </footer>
     </div>
     <!-- End Footer -->
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -7,3 +7,7 @@ h1, form{
     margin-bottom: 20px;
 }
 
+#style-select, #style{
+    width: 30%;
+}
+
