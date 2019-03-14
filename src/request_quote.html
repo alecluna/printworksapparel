@@ -6,8 +6,8 @@
     <title>Request a Quote</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
     <link rel="stylesheet" type="text/css" href="css/request_quote.css">
-
-    <!-- Required/Bootstrap Tags -->
+    <script src="javascript/request_quote.js"></script>
+    <!-- Required/CDN -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -33,18 +33,23 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-                <li class="nav-item">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
+                <li class="nav-item nav-home col">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item col">
                     <a class="nav-link" href="about_us.html">About Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item col">
                     <a class="nav-link" href="request_quote.html">Contact Us</a>
                 </li>
-                <a class="navbar-logo" href="index.html"></a>
-                <li class="nav-item">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.svg" type="image/svg+xml" class="svg">
+                </a>
+                <li class="nav-item col">
                     <a class="nav-link" href="#">Apparel</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item col">
                     <a class="nav-link" href="#">Customer Reviews</a>
                 </li>
             </ul>
@@ -55,6 +60,21 @@
     <h1>Request a Quote</h1>
     <form name="request" method="POST" data-netlify="true">
         <div class="form-group">
+            <p>Email:</p>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <p>Phone Number:</p>
+            <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
+            <p>Quantity:</p>
+            <input type="number" class="form-control" id="quantity" placeholder="Enter Quantity">
+            <p>Need By:</p>
+            <input type="date" class="form-control" id="needBy" placeholder="Enter Due Date">
+            <p>How Did You Hear About Us?</p>
+            <input type="text" class="form-control" id="howHear" placeholder="How did you hear about us?"
+                maxlength="200" />
+            <p>Select a Style:</p>
+            <select class="form-control" name="style" id="style-select" onchange='CheckStyle(this.value);'>
+                <option value="" disabled selected>Style</option>
             <p>
                 <font color="black">Email:</font>
             </p>
@@ -90,6 +110,8 @@
                 <option value="sportT">Sport T-Shirt</option>
                 <option value="cap">Cap</option>
                 <option value="other">Other</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Enter a style" name="style" id="style" style='display:none;'/>
             </select required>
             </p>
             <input type="text" name="Style" placeholder="Enter a style" name="style" id="style" style='display:none;' />
@@ -122,16 +144,6 @@
         </footer>
     </div>
     <!-- End Footer -->
-    <!--Text box if user selects "Other" in quote form-->
-    <script type="text/javascript">
-        function CheckStyle(val){
-         var element=document.getElementById('style');
-         if(val=='other')
-           element.style.display='block';
-         else  
-           element.style.display='none';
-        }
-      </script> 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
