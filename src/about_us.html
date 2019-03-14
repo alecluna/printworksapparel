@@ -50,7 +50,117 @@
         </div>
     </nav>
     <!-- End Header -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .faq {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    
+    .active, .faq:hover {
+      background-color: #ccc; 
+    }
+    
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Who is Printworks?</h2>    
+    <h2>FAQs:</h2>
+    
+    <button class="faq">What are your hours?</button>
+    <div class="panel">
+      <p>Monday - Friday</p>
+      <p>9 am - 4 pm APPOINTMENT ONLY</p>
+      <p>There are times we leave office for appointments or deliveries. Best option is to schedule an appointment.</p>
+    </div>
+    
+    <button class="faq">Where are you located?</button>
+    <div class="panel">
+      <p>9751 Dino Dr</p>
+      <p>Elk Grove, CA 95624</p>
+      <a target="_blank" href="http://www.google.com/search?q=9751+dino+dr+elk+grove+ca+95624">Google Directions</a>
+    </div>
+    
+    <button class="faq">How can I get an estimate?</button>
+    <div class="panel">
+      <p>We have easy to use forms on our website that will ask you all the information we need to be able to provide you with an estimate.</p>
+      <a target="_blank" href="request_quote.html">GET QUOTE</a>
+    </div>
 
+    <button class="faq">What is your ordering process?</button>
+    <div class="panel">
+      <p>All orders are done through email. Once artwork is approved by customer, we will email you an invoice for payment. Once we receive your approval, the apparel and/or materials are ordered. Your turnaround time begins once they arrive from the vendor. Payment is due upon pick up. For orders over $250, payment is due PRIOR to order. For schools a PO # is required before any order can be made.</p>
+    </div>
+    
+    <button class="faq">What forms of payment do you accept?</button>
+    <div class="panel">
+      <p>CASH , BUSINESS/CASHIER'S CHECK , VENMO , PAYPAL</p> 
+      <p>WE DO ACCEPT ALL MAJOR CREDIT CARDS (3% FEE)</p>
+    </div>
+    
+    <button class="faq">What are your standard production turnaround times?</button>
+    <div class="panel">
+      <p>Heat Press - (jersey names/numbers if jerseys provided) 3 - 5 days (standard colors only)</p>
+      <p>Screen Printing - 2 week turnaround once logo and sizes are approved 
+        3 weeks for exclusive Sports Jerseys (Augusta/High Five Brands)</p>
+      <p>Embroidery - 2 weeks if logo is Digitized already. 3 weeks without</p>
+      <p>*Rush orders will incur additional fees for anything less than 5 business days. Working days are weekdays. No weekends or holidays.</p>
+    </div>
+
+    <button class="faq">How will I know when my order is ready?</button>
+    <div class="panel">
+      <p>We will send you an email informing you that your order is ready to be picked up. If you ask that we contact you via phone/text we will do so by request only.</p>
+    </div>
+    
+    <button class="faq">Where can I see what brands of apparel you carry?</button>
+    <div class="panel">
+      <a target="_blank" href="https://www.sanmar.com">SANMAR</a>
+    </div>
+    
+    <button class="faq">Can you help me design a logo?</button>
+    <div class="panel">
+      <p>We ask customers to share a sketch or screenshot that we can work off. We can not free hand any logos. All new logos have a $15 fee (one time only). All future reorders of the same logo will waive artwork fee.</p>
+    </div>
+    
+    <script>
+    var acc = document.getElementsByClassName("faq");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+    </body>
+    </html>
+    <h2>Yelp Reviews</h2>
+    
     <!-- Begin Footer -->
     <div class="footer">
             <footer class="navbar navbar-light bg-light row">
