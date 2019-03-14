@@ -35,5 +35,4 @@ webpack-bundle.json
 /printworks/
 /saleor/static/assets/
 /saleor/settings.py
-functions
 node_modules
