@@ -1,7 +1,7 @@
 //async fetch() to the lambda function
 const fetchUsers = async () =>
   await (await fetch("/.netlify/functions/getYelpReviews")).json();
-//await fetch("http://localhost:9000/getYelpReviews");
+//await (await fetch("http://localhost:9000/getYelpReviews")).json();
 
 fetchUsers().then(data => {
   console.log(data);
