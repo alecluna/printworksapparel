@@ -27,7 +27,6 @@ dist/
 # data
 /docs/_build/
 /media/
-/node_modules/
 /static/
 /saleor/static/assets/
 webpack-bundle.json
@@ -36,3 +35,4 @@ webpack-bundle.json
 /printworks/
 /saleor/static/assets/
 /saleor/settings.py
+node_modules
