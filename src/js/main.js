@@ -1,5 +1,6 @@
 //async fetch() to the lambda function
-const fetchUsers = async () => await fetch("/.netlify/lambda/getYelpReviews");
+const fetchUsers = async () =>
+  await fetch("/.netlify/functions/getYelpReviews");
 //await fetch("http://localhost:9000/getYelpReviews");
 
 fetchUsers()
