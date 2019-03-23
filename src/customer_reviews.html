@@ -5,7 +5,7 @@
 <head>
     <title>Printworks Apparel</title>
     <link rel="stylesheet" type="text/css" href="css/template.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+
     <!-- Required/Bootstrap Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,82 +32,32 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
-                <li class="nav-item nav-home col">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item col">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="about_us.html">About Us</a>
                 </li>
-                <li class="nav-item col">
-                    <a class="nav-link" href="services.html">Services</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="request_quote.html">Contact Us</a>
                 </li>
-                <a href="index.html" class="nav-logo">
-                    <img src="images/logo.svg" type="image/svg+xml" class="svg">
-                </a>
-                <li class="nav-item col">
-                    <a class="nav-link" href="request_quote.html">Estimate</a>
+                <a class="navbar-logo" href="index.html"></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apparel</a>
                 </li>
-                <li class="nav-item col">
-                    <a class="nav-link" href="#">Gallery</a>
-                <li class="nav-item col">
-                    <a class="nav-link" href="customer_reviews.html">Customer Reviews</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Customer Reviews</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- End Header -->
-
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1>Printworks Apparel</h1>
-            <p>Custom Printing Apparel</p>
-            <a class="btn btn-secondary" href="request_quote.html">Request A Quote</a>
-        </div>
+    
+    <!-- Reviews section: uses Yelp API-->
+    <div class="review-container">
+    <h2 class="text-center"> What Customers are Saying: </h2>
+        <ul class="list-group" id="reviews">
+        </ul>
     </div>
-
-    <div class="tiles">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mt-4">
-                <div class="tile-image">
-                    <div class="tile-text">
-                        <h1>Catalog (Sanmar)</h1>
-                        <a class="btn btn-secondary" href="#">See Catalog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 mt-4">
-                <div class="tile-image">
-                    <div class="tile-text">
-                        <h1>Best</h1>
-                        <a class="btn btn-secondary" href="#">Best</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="catalog-container">
-        <h3 class="text-center">Some of our most popular blanks</h3>
-            <div class="catalog">
-                ​<picture>
-                    <a href="https://www.sanmar.com/p/3985_AquaticBlue?text=PC54">
-                    <img src="images/tee.png" class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-                <picture>
-                    <a href="https://www.sanmar.com/p/115_CherryRed#?doScrollToGrid=true">
-                        <img src="images/hoodie.png"class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-                <picture>
-                    <a href="https://www.sanmar.com/p/9285_Red?text=BC6008">
-                        <img src="images/croptee.png" class="img-fluid" alt="tee">
-                    </a>
-                </picture>
-            </div>
-    </section>
-
+    
     <!-- Begin Footer -->
     <div class="footer">
         <footer class="navbar navbar-light bg-light row">
@@ -142,6 +92,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
