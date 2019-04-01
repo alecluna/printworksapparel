@@ -4,6 +4,8 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .gallery-img {
