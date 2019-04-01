@@ -1,13 +1,24 @@
-h1, form{
-    margin-left:10%;
-    margin-right:10%;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.form-control{
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1,
+form {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-control {
     margin-bottom: 20px;
 }
 
-#style-select, #style{
+#style-select,
+#style {
     width: 30%;
 }
-

@@ -1,9 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .review-container {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
 }
 
 .li {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
