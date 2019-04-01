@@ -1,0 +1,36 @@
+nav {
+    position: relative;
+    margin: auto;
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-home {
+    display: none;
+}
+
+a.nav-logo {
+    background: center no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+
+.nav-item {
+    padding: 80px 60px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 990px) {
+    .nav-item {
+        padding: 0.5em;
+    }
+    a.nav-logo {
+        display: none;
+    }
+    .nav-home {
+        display: contents;
+    }
+}

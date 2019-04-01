@@ -1,0 +1,22 @@
+.tiles {
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.tile-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/photo1.jpeg');
+    height: 600px;
+    width: auto;
+}
+
+.tile-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
