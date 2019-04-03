@@ -1,0 +1,31 @@
+footer {
+    clear: both;
+    position: relative;
+    z-index: 1;
+    height: -3em;
+    margin-top: 40em;
+}
+
+.footer-title {
+    font-size: 20px;
+}
+.footer-info-menu {
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 0 !important;
+}
+
+#ig,
+#yelp {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-social-img {
+    padding-top: 40px;
+}
