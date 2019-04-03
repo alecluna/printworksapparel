@@ -6,10 +6,6 @@ nav {
     text-align: center;
 }
 
-.nav-home {
-    display: none;
-}
-
 a.nav-logo {
     background: center no-repeat;
     position: relative;
