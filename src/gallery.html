@@ -56,20 +56,35 @@
 
 <div align="center">
     <p align="center"><strong>Instagram Feed</strong></p>
-    <ul id="printworks_instafeed"></ul>
+    <div class="row" id="printworks_instafeed"></div>
+    <div class="modal" id=myModal>
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    </div>
     <script type="text/javascript">
         var token = '12144870609.53baa6c.8b9bd2a417414fffb820c1e551e137ad',
             num_photos = 10,
-            container = document.getElementById( 'printworks_instafeed' ),
+            container = document.getElementById( 'printworks_instafeed'),
+            modaldiv = document.getElementById('myModal'),
             scrElement = document.createElement( 'script' );
 
-        window.mishaProcessResult = function( data ) {
+        window.igresults = function( data ) {
+            modaldiv.innerHTML += '<div class="modal-content">';
             for( x in data.data ){
-                container.innerHTML += '<li><img src="' + data.data[x].images.low_resolution.url + '"></li>';
+                var imageurl = data.data[x].images.low_resolution.url;
+                console.log(imageurl);
+                var i = x;
+                
+                container.innerHTML += '<div class="column"><a><img src="' + imageurl + '"onclick="openModal();currentSlide('+ i +')"></a></div>';
+                modaldiv.innerHTML += '<div class="mySlides"><img id="image_modal src="' + imageurl + '"width=100%"></div>';
+                modaldiv.innerHTML += '<div class="column"><img class="demo cursor" src="' + imageurl + '" onclick="currentSlide('+i+') style"max-width:40%" "></div>"'
+
             }
+            modaldiv.innerHTML +='<a class="prev" onclick="plusSlides(-1)">&#10094;</a>'+
+            '<a class="next" onclick="plusSlides(1)">&#10095;</a>';
+            container.innerHTML += '</div></div>'
         }
 
-        scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&callback=mishaProcessResult' );
+        scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&callback=igresults' );
         document.body.appendChild( scrElement );
     </script>
 
@@ -98,7 +113,43 @@
     </footer>
 </div>
 <!-- End Footer -->
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
 
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+
+}
+</script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
