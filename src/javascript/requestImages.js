@@ -1,6 +1,6 @@
 const fetchInstagram = async () =>
-    await (await fetch('https://localhost:9000/getInstagramPics')).json()
+    await (await fetch('http://localhost:9000/getInstagramPics')).json()
 
-fetchInstagram().then(data => {
-    console.log(data)
+fetchInstagram().then(response => {
+    console.log(response)
 })

@@ -14,6 +14,9 @@ exports.handler = function instagram(event, context, callback) {
                 statusCode: 200,
                 headers: {
                     'content-type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers':
+                        'Origin, X-Requested-With, Content-Type, Accept',
                 },
                 body: JSON.stringify(posts),
             })
