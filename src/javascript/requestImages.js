@@ -1,5 +1,5 @@
 const fetchInstagram = async () =>
-    await (await fetch('http://localhost:9000/getInstagramPics')).json()
+    await (await fetch('/.netlify/functions/getYelpReviews')).json()
 
 fetchInstagram().then(response => {
     console.log(response)
