@@ -14,7 +14,6 @@ fetchInstagram().then(response => {
 
         const image = document.createElement('img')
         image.className = 'gallery-image-tile'
-        listElem.className = 'gallery-img'
         image.setAttribute('src', data.images.low_resolution.url)
         image.setAttribute('href', data.images.low_resolution.url)
         listElem.appendChild(image)
