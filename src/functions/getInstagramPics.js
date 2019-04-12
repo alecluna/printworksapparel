@@ -1,14 +1,11 @@
 const axios = require('axios')
 
 exports.handler = function instagram(event, context, callback) {
-    const endpoint = 'https://api.instagram.com/v1/users/self/media/recent'
-    // const token = process.env.INSTAGRAM_ACCESS_TOKEN
-    const token = '12144870609.53baa6c.8b9bd2a417414fffb820c1e551e137ad'
-
-    const limit = 5
+    const {IG_TOKEN, IG_URL} = process.env
+    const limit = 20
 
     axios
-        .get(`${endpoint}?access_token=${token}&count=${limit}`)
+        .get(`${IG_URL}?access_token=${IG_TOKEN}&count=${limit}`)
         .then(({ data: { data: posts } }) => {
             callback(null, {
                 statusCode: 200,
