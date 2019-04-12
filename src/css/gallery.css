@@ -1,26 +1,3 @@
-#printworks_instafeed {
-    list-style: none;
-}
-#printworks_instafeed li {
-    float: left;
-    max-width: 250px;
-    max-height: 250px;
-    margin: 10px;
-}
-#printworks_instafeed li:hover {
-    overflow: auto;
-}
-#printworks_instafeed li img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-#printworks_instafeed li img:hover {
-    opacity: 0.8;
-}
-
 .image_modal {
     max-width: 30%;
 }
@@ -162,4 +139,8 @@ img.hover-shadow {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.gallery-img {
+    border-radius: 5px;
 }
