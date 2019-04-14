@@ -4,15 +4,22 @@
 
 <head>
     <title>Printworks Apparel</title>
-    <link rel="stylesheet" type="text/css" href="css/template.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/home-page.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/hero.css">
+    <link rel="stylesheet" type="text/css" href="css/tile.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/fadein-animations.css">
+
+
 
     <!-- Required/Bootstrap Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Customized -->
+   
+        <!-- Customized -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -32,32 +39,27 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-                <li class="nav-item">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
+                <li class="nav-item col">
                     <a class="nav-link" href="about_us.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="request_quote.html">Contact Us</a>
+                <li class="nav-item col">
+                    <a class="nav-link" href="services.html">Services</a>
                 </li>
-                <a class="navbar-logo" href="index.html"></a>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Apparel</a>
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.svg" type="image/svg+xml" class="svg">
+                </a>
+                <li class="nav-item col">
+                    <a class="nav-link" href="request_quote.html">Estimate</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Customer Reviews</a>
-                </li>
+                <li class="nav-item col">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
             </ul>
         </div>
     </nav>
     <!-- End Header -->
-    
-    <!-- Reviews section: uses Yelp API-->
-    <div class="review-container">
-    <h2 class="text-center"> What Customers are Saying: </h2>
-        <ul class="list-group" id="reviews">
-        </ul>
-    </div>
-    
+
+
     <!-- Begin Footer -->
     <div class="footer">
         <footer class="navbar navbar-light bg-light row">
