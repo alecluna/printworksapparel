@@ -10,7 +10,7 @@ footer {
     font-size: 20px;
 }
 .footer-info-menu {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 2%;
     margin-top: 1%;
 }
@@ -22,10 +22,23 @@ footer {
 
 #ig,
 #yelp {
-    width: 30px;
-    height: 30px;
+    margin-top:20px;
+    width: 50px;
+    height: 50px;
+}
+#ig{
+    margin-left: 50px;
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.footer-social-img {
-    padding-top: 40px;
+@media only screen and (max-width: 990px) {
+    #ig{
+        margin-left: 20px;
+    }
 }
