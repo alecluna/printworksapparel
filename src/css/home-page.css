@@ -28,8 +28,11 @@ html {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5%;
-    margin-bottom: 5%;
+}
+
+.catalog {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .catalog > picture {
     height: 20%;

@@ -21,12 +21,6 @@
 </head>
 
 <body>
-    <!-- Begin Header -->
-    <div>
-        <div id="preface">
-            <p>Custom Printing Apparel</p>
-        </div>
-    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
@@ -56,19 +50,18 @@
     </nav>
     <!-- End Header -->
 
-    <h1 class="text-center">Request a Quote</h1>
+    <h1 class="text-center request-quote">Request a Quote</h1>
     <form class="request-form" name="request" method="POST" data-netlify="true">
         <div class="form-group">
-            
             <p>
-                <font color="black">Email:</font>
+                <font color="black"> Email: </font>
             </p>
             <input type="email" style = "border-color: #bfae78" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="Enter email" required>
-            <p>
-                <font color="black">Phone:</font>
+            <p> 
+                <font color="black"> Phone:</font>
             </p>
-            <input type="tel" style = "border-color: #bfae78"name ="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" required>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style="border-color: #bfae78"name ="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" required>
             <p>
                 <font color="black">Quantity:</font>
             </p>
