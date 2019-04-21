@@ -144,3 +144,8 @@ img.hover-shadow {
 .gallery-image-tile {
     border-radius: 5px;
 }
+
+.ig-header {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
