@@ -3,35 +3,26 @@ const fetchUsers = async () =>
     await (await fetch('/.netlify/functions/getYelpReviews')).json()
 
 fetchUsers().then(data => {
-    console.log(data)
-
     reviewList = document.querySelector('#reviews')
 
     //generate HTML from api
     data.reviews.forEach(review => {
         const listElem = document.createElement('li')
-        listElem.className = 'list-group-item'
+        listElem.className = 'review-list'
 
-        const reviewHeading = document.createElement('h4')
-        reviewHeading.className = 'mb-1'
+        const reviewHeading = document.createElement('h3')
+        reviewHeading.className = 'review-heading'
         reviewHeading.appendChild(document.createTextNode(review.user.name))
         listElem.appendChild(reviewHeading)
 
-        const ratingStars = document.createElement('h4')
-        ratingStars.className = 'mb-1'
-        ratingStars.appendChild(document.createTextNode(review.rating))
+        const ratingStars = document.createElement('img')
+        ratingStars.className = 'yelp-stars'
+        ratingStars.src = './images/yelp-stars.png'
         listElem.appendChild(ratingStars)
 
-        /////// This is causing me some issues right now
-        /////// My guess is CORS is preventing retreival of images from their API.
-        const userImg = document.createElement('img')
-        userImg.className = 'rounded'
-        userImg.setAttribute('src', review.user.profile_url)
-        listElem.appendChild(userImg)
-
-        //also, we can fix this link later on
         const link = document.createElement('a')
         link.appendChild(document.createTextNode(review.text))
+        link.className = 'review-text'
         link.href = review.url
         link.target = '_blank'
         listElem.appendChild(link)
