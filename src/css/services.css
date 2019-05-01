@@ -71,6 +71,13 @@ body {
     margin-top: 2%;
 }
 
+.request-service-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .active,
 .request-service:hover {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
