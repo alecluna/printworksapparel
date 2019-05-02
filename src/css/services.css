@@ -46,7 +46,7 @@ body {
     color: grey;
 }
 
-hr {
+.catalog hr {
     width: 20%;
 }
 
@@ -69,6 +69,13 @@ hr {
     -webkit-transition: 1s;
     transition: 1s;
     margin-top: 2%;
+}
+
+.request-service-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .active,

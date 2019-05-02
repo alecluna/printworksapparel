@@ -9,6 +9,16 @@ html {
     font-family: 'Montserrat', sans-serif !important;
 }
 
+#title {
+    font-size: 3.5rem;
+    /* text-shadow: 3px 3px 6px #000000; */
+    text-shadow: 3px 3px 6px black, 0 0 35px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0);
+}
+#subtitle {
+    font-size: 1.75rem;
+    text-shadow: 3px 3px 6px black;
+}
+
 #preface {
     font-size: 15px;
     padding-top: 1%;
@@ -17,6 +27,30 @@ html {
     margin-bottom: -10px;
 }
 
+#btn-override {
+    color: #fff;
+    background-color: #bfae78;
+    border-color: #bfae78;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+    margin-top: 2%;
+}
+.btn:hover {
+    background: -webkit-linear-gradient(
+        360deg,
+        #8e7a3f 10%,
+        #b09a51 360%
+    ); /* Chrome 10+, Saf5.1+ */
+    background: -o-linear-gradient(
+        360deg,
+        #8e7a3f 10%,
+        #b09a51 360%
+    ); /* Opera 11.10+ */
+    background: linear-gradient(360deg, #8e7a3f 10%, #b09a51 360%); /* W3C */
+}
 .card {
     width: 18rem;
     margin: 10px;

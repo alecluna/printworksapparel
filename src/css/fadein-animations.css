@@ -3,7 +3,8 @@
 .text-center,
 .catalog,
 .gallery-header,
-.ig-header {
+.ig-header,
+#img1 {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
     -ms-animation: fadein 1s; /* Internet Explorer */
@@ -16,7 +17,9 @@
 .faq,
 .request-form,
 .gallery-img,
-.igimages {
+.igimages,
+#img2,
+#img3 {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */

@@ -145,6 +145,15 @@ img.hover-shadow {
     border-radius: 5px;
 }
 
+.click-here {
+    padding-top: 5%;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .ig-header {
     margin-top: 2%;
     margin-bottom: 5%;
