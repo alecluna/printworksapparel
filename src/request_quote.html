@@ -64,8 +64,10 @@
             <p>
                 <font color="black"> Phone:</font>
             </p>
-            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" style="border-color: #bfae78" name="phone"
-                class="form-control" id="exampleInputPassword1" placeholder="Phone Number" required>
+            <input type="tel" pattern="(?:\(\d{3}\)|\d{3})\d{3}[- ]?\d{4}" style="border-color: #bfae78" name="phone"
+                class="form-control" id="exampleInputPassword1" placeholder="(123)456-7890"
+                onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);"
+                required>
             <p>
                 <font color="black">Quantity:</font>
             </p>
@@ -79,8 +81,8 @@
             <p>
                 <font color="black">How did you hear about us?</font>
             </p>
-            <input type="text" style = "border-color: #bfae78" name="How did you hear about us?" class="form-control" id="howHear" placeholder="How did you hear about us?"
-                maxlength="200"/>
+            <input type="text" style="border-color: #bfae78" name="How did you hear about us?" class="form-control"
+                id="howHear" placeholder="Yelp, Instagram, Word of Mouth..." maxlength="200" />
             <p>
                 <font color="black">Select a style:</font>
             </p>
@@ -118,10 +120,11 @@
                 </select required>
             </p>
             <p>
-                <font color="black">Comments</font>
+                <font color="black">Additional Comments</font>
             </p>
-                <input type="text" style = "border-color: #bfae78" name="Comments" class="form-control" id="comments" placeholder="Additional Comments"
-                    maxlength="200"/>
+
+            <textarea rows="4" cols="50" name="Comments" class="form-control" id="comments" form="request"
+                style="border-color: #bfae78" maxlength="1000" placeholder="1000 characters max"></textarea>
         </div>
         <div>
             <button type="submit" style="border-color: #bfae78; background-color: #bfae78"
@@ -154,14 +157,14 @@
     <!-- End Footer -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
