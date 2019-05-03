@@ -9,7 +9,16 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+#about-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left:15%;
+    padding-right: 15%;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
 .catalog > picture {
     height: 20%;
     width: 20%;
