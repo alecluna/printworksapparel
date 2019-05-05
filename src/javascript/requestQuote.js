@@ -43,15 +43,17 @@ const backspacerUP = (object, e) => {
 }
 
 const backspacerDOWN = (object, e) => {
+    let keycode
+
     if (e) {
         e = e
     } else {
         e = window.event
     }
     if (e.which) {
-        var keycode = e.which
+        keycode = e.which
     } else {
-        var keycode = e.keyCode
+        keycode = e.keyCode
     }
     ParseForNumber2(object)
 }
