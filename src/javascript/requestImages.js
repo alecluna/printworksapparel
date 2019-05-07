@@ -21,7 +21,7 @@ fetchInstagram()
         })
     })
     .catch(() => {
-        reviewList = document.querySelector('#igimages')
+        reviewList = document.querySelector('.ig-error')
         const errorIcon = document.createElement('i')
         errorIcon.className = 'fas fa-exclamation-circle fa-4x ig-error'
         reviewList.appendChild(errorIcon)
