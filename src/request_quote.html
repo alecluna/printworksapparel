@@ -108,7 +108,24 @@
                 <font color="black">Upload Your Design:</font>
             </p>
             <p>
-                <input type="file" name="pic" id="pic"><br>
+                <input type="file" name="someId" id="someId"><br>
+                <script type="text/javascript">
+                    var file = document.getElementById('someId');
+
+                    file.onchange = function(e) {
+                        var ext = this.value.match(/\.([^\.]+)$/)[1];
+                        switch (ext) {
+                            case 'jpg':
+                            case 'pdf':
+                            case 'png':
+                            case 'gif':
+                            break;
+                            default:
+                            alert('Please Upload in format: (PDF, JPEG, PNG, GIF)');
+                            this.value = '';
+                        }
+                    };
+                </script>
             </p>
             <p>
                 <font color="black">Service:</font>
