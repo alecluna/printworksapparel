@@ -9,8 +9,6 @@ fetchInstagram()
 
         response.forEach(function(data) {
             const listElem = document.createElement('li')
-            listElem.style.listStyle = 'none'
-            listElem.style.padding = '5px'
             listElem.className = 'gallery-header'
 
             const image = document.createElement('img')
