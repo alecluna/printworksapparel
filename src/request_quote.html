@@ -57,6 +57,12 @@
     <form class="request-form" name="request" method="POST" data-netlify="true">
         <div class="form-group">
             <p>
+                <font color="black">Name:</font>
+            </p>
+                <input type="text" style="border-color: #bfae78" name="Name" class="form-control"
+                    id="name" placeholder="Full Name" maxlength="100" required>
+            <p>
+            <p>
                 <font color="black"> Email: </font>
             </p>
             <input type="email" style="border-color: #bfae78" name="email" class="form-control" id="exampleInputEmail1"
@@ -108,9 +114,9 @@
                 <font color="black">Upload Your Design:</font>
             </p>
             <p>
-                <input type="file" name="someId" id="someId"><br>
+                <input type="file" name="pic" id="pic"><br>
                 <script type="text/javascript">
-                    var file = document.getElementById('someId');
+                    var file = document.getElementById('pic');
 
                     file.onchange = function(e) {
                         var ext = this.value.match(/\.([^\.]+)$/)[1];
@@ -119,9 +125,11 @@
                             case 'pdf':
                             case 'png':
                             case 'gif':
+                            case 'jpeg':
+                            case 'svg':
                             break;
                             default:
-                            alert('Please Upload in format: (PDF, JPEG, PNG, GIF)');
+                            alert('Please Upload in format: (PDF, JPG, JPEG, PNG, SVG, GIF)');
                             this.value = '';
                         }
                     };
