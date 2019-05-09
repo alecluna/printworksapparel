@@ -3,9 +3,7 @@ const fetchInstagram = async () =>
 
 fetchInstagram()
     .then(response => {
-        console.log(response)
-
-        images = document.querySelector('#igimages')
+        images = document.querySelector('.igimages')
 
         response.forEach(function(data) {
             const listElem = document.createElement('li')
