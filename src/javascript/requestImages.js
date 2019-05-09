@@ -3,14 +3,10 @@ const fetchInstagram = async () =>
 
 fetchInstagram()
     .then(response => {
-        console.log(response)
-
-        images = document.querySelector('#igimages')
+        images = document.querySelector('.igimages')
 
         response.forEach(function(data) {
             const listElem = document.createElement('li')
-            listElem.style.listStyle = 'none'
-            listElem.style.padding = '5px'
             listElem.className = 'gallery-header'
 
             const image = document.createElement('img')
@@ -23,7 +19,7 @@ fetchInstagram()
         })
     })
     .catch(() => {
-        reviewList = document.querySelector('#igimages')
+        reviewList = document.querySelector('.ig-error')
         const errorIcon = document.createElement('i')
         errorIcon.className = 'fas fa-exclamation-circle fa-4x ig-error'
         reviewList.appendChild(errorIcon)

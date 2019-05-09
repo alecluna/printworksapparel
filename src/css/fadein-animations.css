@@ -3,7 +3,6 @@
 .text-center,
 .catalog,
 .gallery-header,
-.ig-header,
 #img1 {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -16,7 +15,8 @@
 .faq,
 .request-form,
 .gallery-img,
-.igimages,
+.ig-error,
+.ig-header,
 #img2 {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -27,7 +27,9 @@
 
 #img3,
 .request-service-div,
-.review-container {
+.review-container,
+.igimages,
+.click-here {
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 3s; /* Firefox < 16 */
     -ms-animation: fadein 3s; /* Internet Explorer */
