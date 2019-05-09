@@ -1,4 +1,6 @@
-const puppeteer = require('puppeteer')(async () => {
+const puppeteer = require('puppeteer');
+
+(async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page
@@ -7,7 +9,7 @@ const puppeteer = require('puppeteer')(async () => {
             timeout: 0,
         })
         .then(() => {
-            console.log('success')
+            console.log('gallery page successful load')
         })
         .catch(res => {
             console.log('fails', res)

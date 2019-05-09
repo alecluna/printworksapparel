@@ -1,12 +1,12 @@
-const puppeteer = require('puppeteer')
+const puppeteer = require('puppeteer');
 
-;(async () => {
+(async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page
         .goto('http://127.0.0.1:5500/src/', { waitUntil: 'load', timeout: 0 })
         .then(() => {
-            console.log('success')
+            console.log('home page successful load')
         })
         .catch(res => {
             console.log('fails', res)

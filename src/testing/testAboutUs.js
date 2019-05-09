@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
             timeout: 0,
         })
         .then(() => {
-            console.log('success')
+            console.log('about us page successful load')
         })
         .catch(res => {
             console.log('fails', res)
