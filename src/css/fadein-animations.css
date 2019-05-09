@@ -3,7 +3,8 @@
 .text-center,
 .catalog,
 .gallery-header,
-.ig-header {
+.ig-header,
+#img1 {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
     -ms-animation: fadein 1s; /* Internet Explorer */
@@ -12,16 +13,26 @@
 }
 
 .tiles,
-.review-container,
 .faq,
 .request-form,
 .gallery-img,
-.igimages {
+.igimages,
+#img2 {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
     animation: fadein 2s;
+}
+
+#img3,
+.request-service-div,
+.review-container {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
 }
 
 @keyframes fadein {

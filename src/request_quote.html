@@ -30,8 +30,11 @@
 
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto row">
+                <li class="nav-item nav-home col">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
                 <li class="nav-item col">
-                    <a class="nav-link" href="about_us.html">About Us</a>
+                    <a class="nav-link" href="about_us.html">About</a>
                 </li>
                 <li class="nav-item col">
                     <a class="nav-link" href="services.html">Services</a>
@@ -40,7 +43,7 @@
                     <img src="images/logo.svg" type="image/svg+xml" class="svg">
                 </a>
                 <li class="nav-item col">
-                    <a class="nav-link"  href="request_quote.html">Estimate</a>
+                    <a class="nav-link" href="request_quote.html">Estimate</a>
                 </li>
                 <li class="nav-item col">
                     <a class="nav-link" href="gallery.html">Gallery</a>
@@ -54,101 +57,141 @@
     <form class="request-form" name="request" method="POST" data-netlify="true">
         <div class="form-group">
             <p>
+                <font color="black">Name:</font>
+            </p>
+                <input type="text" style="border-color: #bfae78" name="Name" class="form-control"
+                    id="name" placeholder="Full Name" maxlength="100" required>
+            <p>
+            <p>
                 <font color="black"> Email: </font>
             </p>
-            <input type="email" style = "border-color: #bfae78" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email" required>
-            <p> 
+            <input type="email" style="border-color: #bfae78" name="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter email" required>
+            <p>
                 <font color="black"> Phone:</font>
             </p>
-            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style="border-color: #bfae78"name ="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" required>
+            <input type="tel" pattern="(?:\(\d{3}\)|\d{3})\d{3}[- ]?\d{4}" style="border-color: #bfae78" name="phone"
+                class="form-control" id="exampleInputPassword1" placeholder="(123)456-7890"
+                onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);"
+                required>
             <p>
                 <font color="black">Quantity:</font>
             </p>
-            <input type="number" style = "border-color: #bfae78" name="quantity" class="form-control" id="quantity" placeholder="Quantity" required>
+            <input type="number" style="border-color: #bfae78" name="quantity" class="form-control" id="quantity"
+                placeholder="Quantity" required>
             <p>
                 <font color="black">Need By:</font>
             </p>
-            <input type="date" name="date" style = "border-color: #bfae78" class="form-control" id="needBy" placeholder="Need By" required>
+            <input type="date" name="date" style="border-color: #bfae78" class="form-control" id="needBy"
+                placeholder="Need By" required>
             <p>
                 <font color="black">How did you hear about us?</font>
             </p>
-            <input type="text" style = "border-color: #bfae78" name="How did you hear about us?" class="form-control" id="howHear" placeholder="How did you hear about us?"
-                maxlength="200" required/>
+            <input type="text" style="border-color: #bfae78" name="How did you hear about us?" class="form-control"
+                id="howHear" placeholder="Yelp, Instagram, Word of Mouth..." maxlength="200" />
             <p>
                 <font color="black">Select a style:</font>
             </p>
             <p>
-            <select style = "border-color: #bfae78;" name="style" size="1" onchange='CheckStyle(this.value);'>
-                <option>Style</option>
-                <option value="tShirt">T-Shirt</option>
-                <option value="longSleeve">Longsleeve T-Shirt</option>
-                <option value="tankTop">Tank Top</option>
-                <option value="hoodie">Hoodie</option>
-                <option value="sportT">Sport T-Shirt</option>
-                <option value="cap">Cap</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" class="form-control" placeholder="Enter a style" name="style" id="style" style='display:none;'/>
-            </select required>
+                <select style="border-color: #bfae78;" name="style" size="1" onchange='CheckStyle(this.value);'>
+                    <option>Style</option>
+                    <option value="tShirt">T-Shirt</option>
+                    <option value="longSleeve">Long Sleeve T-Shirt</option>
+                    <option value="tankTop">Tank Top</option>
+                    <option value="hoodie">Hoodie</option>
+                    <option value="sportT">Sport T-Shirt</option>
+                    <option value="cap">Cap</option>
+                    <option value="other">Other</option>
+                </select required>
+                <p style="margin-top: -10px;font-style: italic; font-size:80%;" > Browse the catalogs: <a href="http://www.sanmar.com/" target="_blank">SANMAR</a>
+                    or <a href="https://www.augustasportswear.com/en/augustasportswear?catalogId=10601&catalogId=10601&langId=-1&storeId=10251&storeId=10251&krypto=hfe3XNKIZ5iPupQ9%2FW8oeQw0x%2FmaWCeyR6FiHLX9dG4JiOalD3Us11DGqY8eoD4heUUTPKtcBKIePA7xi7lwXr6Q29WYz%2FcPCQG8ziCYJT798rIObPBr0AA6OwByT%2B5e%2B0USCGbHk7RseJWirExR6bLNUN5YKs1rKiRoeubDs0Y%3D"target="_blank">AUGUSTA</a>
+                    or <a href="https://www.alstyle.com/us/"target="_blank">ALSTYLE</a></p>
+                <input type="text" class="form-control" placeholder="Enter style or Catalog ID" name="style" id="style"
+                    style='display:none;border-color: #bfae78;' />
+                </select required>
             </p>
-            <input type="text" name="Style" placeholder="Enter a style" name="style" id="style" style='display:none;' />
             <p>
                 <font color="black">Upload Your Design:</font>
             </p>
             <p>
-            <input type="file" name="pic" id="pic"><br>    
+                <input type="file" name="pic" id="pic"><br>
+                <script type="text/javascript">
+                    var file = document.getElementById('pic');
+
+                    file.onchange = function(e) {
+                        var ext = this.value.match(/\.([^\.]+)$/)[1];
+                        switch (ext) {
+                            case 'jpg':
+                            case 'pdf':
+                            case 'png':
+                            case 'gif':
+                            case 'jpeg':
+                            case 'svg':
+                            break;
+                            default:
+                            alert('Please Upload in format: (PDF, JPG, JPEG, PNG, SVG, GIF)');
+                            this.value = '';
+                        }
+                    };
+                </script>
             </p>
             <p>
-                <font color="black">How do you want it done?</font>
+                <font color="black">Service:</font>
             </p>
             <p>
-                <select style = "border-color: #bfae78;" name="service" id="service" size="1">
+                <select style="border-color: #bfae78;" name="service" id="service" size="1" required>
                     <option>Select</option>
                     <option value="screenPrint">Screen Print</option>
                     <option value="embroidery">Embroidery</option>
                     <option value="vinyl">Vinyl Heat Transfer</option>
-                </select required>
+                </select>
             </p>
+            <p>
+                <font color="black">Additional Comments</font>
+            </p>
+
+            <textarea rows="4" cols="50" name="Comments" class="form-control" id="comments" form="request"
+                style="border-color: #bfae78" maxlength="1000" placeholder="1000 characters max"></textarea>
         </div>
         <div>
-            <button type="submit" style = "border-color: #bfae78; background-color: #bfae78" class="btn btn-primary">Submit</button>
+            <button type="submit" style="border-color: #bfae78; background-color: #bfae78"
+                class="btn btn-primary">Submit</button>
         </div>
     </form>
 
     <!-- Begin Footer -->
     <div class="footer">
-            <footer class="navbar navbar-light bg-light row">
-                <div class="footer-info-menu col">
-                    <strong class="footer-title">Where to Find Us</strong>
-                    <hr />
-                    <p class="footer-items">Address: 9751 Dino Dr Elk Grove, CA 95624</p>
-                    <p class="footer-items">Phone: (916) 747-7138 </p>
-                    <p class="footer-items">Email: printworks@email.com</p>
-                    </ul>
-                </div>
-    
-                <div class="logo-container footer-info-menu footer-social-img col">
-                    <a target="_blank" rel="noopener" href="https://www.yelp.com/biz/print-works-elk-grove">
-                        <img id="yelp" src="images/yelp-logo.png" hspace="10">
-                    </a>
-                    <a target="_blank" rel="noopener" href="https://www.instagram.com/printworksapparel/?hl=en">
-                        <img id="ig" src="images/instagram-logo.png" hspace="10">
-                    </a>
-                </div>
-            </footer>
-        </div>
-        <!-- End Footer -->
+        <footer class="navbar navbar-light bg-light row">
+            <div class="footer-info-menu col">
+                <strong class="footer-title">Where to Find Us</strong>
+                <hr />
+                <p class="footer-items">Address: 9751 Dino Dr Elk Grove, CA 95624</p>
+                <p class="footer-items">Phone: (916) 747-7138 </p>
+                <p class="footer-items">Email: printworksapparel@gmail.com</p>
+                </ul>
+            </div>
+
+            <div class="logo-container footer-info-menu footer-social-img col">
+                <a target="_blank" rel="noopener" href="https://www.yelp.com/biz/print-works-elk-grove">
+                    <img id="yelp" src="images/yelp-logo.png" hspace="10">
+                </a>
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/printworksapparel916/">
+                    <img id="ig" src="images/instagram-logo.png" hspace="10">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <!-- End Footer -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
