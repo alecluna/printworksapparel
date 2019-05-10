@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer')
 
-(async () => {
+;(async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page
@@ -14,18 +14,29 @@ const puppeteer = require('puppeteer');
         .catch(res => {
             console.log('fails', res)
         })
-    await page.waitFor('input[name=search]')
 
-    await page.type('input[name=search]', 'hello')
-    await page.$eval('input[name=search]', el => (el.value = 'hello'))
+    const inputName = 'input[id=name]'
+    console.log('typing test name into email form...')
 
-    await page.click('input[type="submit"]')
-    await page.waitForSelector('#mw-content-text')
-    const text = await page.evaluate(() => {
-        const anchor = document.querySelector('#mw-content-text')
-        return anchor.textContent
-    })
-    console.log(text)
+    await page.waitFor(inputName)
+    await page.type(inputName, 'test name')
+    await page.$eval(inputName, el => (el.value = 'test name'))
+
+    console.log('succesful render of input with test name text')
+
+    const inputEmail = 'input[type=email]'
+    console.log('typing test@email into email form...')
+    await page.waitFor(inputEmail)
+    await page.type(inputEmail, 'test@email.com')
+    await page.$eval(inputEmail, el => (el.value = 'test@email.com'))
+
+    console.log('succesful render of input email form and test text')
+    // await page.click('input[type="submit"]')
+    // await page.waitForSelector('#mw-content-text')
+    // const text = await page.evaluate(() => {
+    //     const anchor = document.querySelector('#mw-content-text')
+    //     return anchor.textContent
+    // })
 
     await browser.close()
 })()
