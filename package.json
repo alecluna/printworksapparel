@@ -1,28 +1,30 @@
 {
-  "name": "printworksapparel",
-  "version": "1.0.0",
-  "description": "backend for printworks apparel",
-  "main": "getYelpReviews.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lambda-serve": "netlify-lambda serve src/functions",
-    "lambda-build": "netlify-lambda build src/functions"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alecluna/printworksapparel.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alecluna/printworksapparel/issues"
-  },
-  "homepage": "https://github.com/alecluna/printworksapparel#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "express": "^4.16.4",
-    "netlify-lambda": "^1.4.3",
-    "prettier": "^1.16.4",
-    "request": "^2.88.0"
-  }
+    "name": "printworksapparel",
+    "version": "1.0.0",
+    "description": "backend for printworks apparel",
+    "main": "getYelpReviews.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lambda-serve": "netlify-lambda serve src/functions",
+        "lambda-build": "netlify-lambda build src/functions",
+        "testscripts": "node ./src/testing/testHomePage.js && node ./src/testing/testAboutUs.js && node ./src/testing/testEstimate.js && node ./src/testing/testGallery.js && node ./src/testing/testServices.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alecluna/printworksapparel.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alecluna/printworksapparel/issues"
+    },
+    "homepage": "https://github.com/alecluna/printworksapparel#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "express": "^4.16.4",
+        "netlify-lambda": "^1.4.3",
+        "prettier": "^1.16.4",
+        "puppeteer": "^1.15.0",
+        "request": "^2.88.0"
+    }
 }
