@@ -31,6 +31,32 @@ const puppeteer = require('puppeteer')
     await page.$eval(inputEmail, el => (el.value = 'test@email.com'))
 
     console.log('succesful render of input email form and test text')
+
+    const inputPhone = 'input[type=tel]'
+    console.log('typing 9161235555 into phone number form...')
+    await page.waitFor(inputPhone)
+    await page.type(inputPhone, '9161235555')
+    await page.$eval(inputPhone, el => (el.value = '916-123-5555'))
+
+    console.log('succesful render of 9161235555 phone number form')
+
+    const inputQuantity = 'input[name=quantity]'
+    console.log('selecting 4 for quantity form...')
+    await page.waitFor(inputQuantity)
+    await page.type(inputQuantity, '4')
+    await page.$eval(inputQuantity, el => (el.value = '4'))
+
+    console.log('succesful render of 4 for quantity form')
+
+    const inputNeedbyDate = 'input[id=needBy]'
+    console.log('selecting test Need By Date')
+    await page.waitFor(inputNeedbyDate)
+    await page.type(inputNeedbyDate, '11122019')
+    await page.$eval(inputNeedbyDate, el => (el.value = '11122019'))
+
+    console.log('succesful render of test Need by Date form')
+
+    //add total subission later on
     // await page.click('input[type="submit"]')
     // await page.waitForSelector('#mw-content-text')
     // const text = await page.evaluate(() => {
@@ -38,5 +64,6 @@ const puppeteer = require('puppeteer')
     //     return anchor.textContent
     // })
 
+    await page.screenshot({ path: 'Estimate.png' })
     await browser.close()
 })()
